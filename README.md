@@ -1,9 +1,9 @@
 # grupo_4_black-diamond
-E-commerce, enfocado en la venta de prendas de ropa tipo streetwear, dirigido principalmente a un publico juvenil.
+Nuestro proyecto consiste en un E-commerce enfocado en la venta de prendas de ropa tipo streetwear, dirigido principalmente a un publico juvenil.
 Integrantes:
 Alejandro Rodas: Tengo 18 años y vivo en Medellin, Colombia.
 Juan Pablo Martinez León: Tengo 20 años y vivo en Villavicencio Meta.
-Juan Jose Marulanda.
+Juan Jose Marulanda: Tengo 17 años y vivo en bello.
 Jose Fernando Torres.
 
 Referentes:
