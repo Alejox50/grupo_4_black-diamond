@@ -2,7 +2,7 @@
 E-commerce, enfocado en la venta de prendas de ropa tipo streetwear, dirigido principalmente a un publico juvenil.
 Integrantes:
 Alejandro Rodas.
-Juan Pablo Martinez.
+Juan Pablo Martinez León. Tengo 20 años y vivo en Villavicencio Meta.
 Juan Jose Marulanda.
 Jose Fernando Torres.
 
