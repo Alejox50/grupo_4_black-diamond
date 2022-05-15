@@ -3,7 +3,7 @@ E-commerce, enfocado en la venta de prendas de ropa tipo streetwear, dirigido pr
 Integrantes:
 Alejandro Rodas: Tengo 18 años y vivo en Medellin, Colombia.
 Juan Pablo Martinez León: Tengo 20 años y vivo en Villavicencio Meta.
-Juan Jose Marulanda.
+Juan Jose Marulanda: tengo 17 y vivo en bello.
 Jose Fernando Torres.
 
 Referentes:
