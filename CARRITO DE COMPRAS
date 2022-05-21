@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T00:40:16.759Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="_eO9nY24TzkX0Tr8HVKA" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T01:16:50.687Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="2Yczqu07qMI713rNEJ8j" version="18.1.1" type="github">
   <diagram id="m3QluwiF3gUb1JlZjUJw" name="Page-1">
-    <mxGraphModel dx="3208" dy="2069" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2132" dy="1442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -143,6 +143,92 @@
         </mxCell>
         <mxCell id="7uip4uA4HfFoTwR26rns-4" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/business-black-1/64/45-128.png;fontSize=18;sketch=0;" vertex="1" parent="NhvrALy1FKVK-kJBIoM_-36">
           <mxGeometry x="20" y="19" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-5" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Koulen;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DKoulen;fontSize=16;strokeColor=#0A0A0A;strokeWidth=1;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="970" y="-950" width="340" height="679" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-6" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/business-black-1/64/45-128.png;fontSize=18;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="990" y="-940" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-7" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;BLACK&amp;nbsp;DIAMOND&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="-930" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-9" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=10;fontColor=#000000;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="980" y="-870" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-10" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;salir&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="-880" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-22" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="985" y="-800" width="310" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-23" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Nombre &lt;/font&gt;del &lt;font style=&quot;font-size: 14px;&quot;&gt;producto&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=19;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="-760" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-24" value="" style="shape=image;html=1;verticalLabelPosition=bottom;verticalAlign=top;imageAspect=1;aspect=fixed;image=img/clipart/Gear_128x128.png;fontFamily=Helvetica;fontSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="995" y="-730" width="65" height="76.26" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-25" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;BLACK DIAMOND Colombia&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="-740" width="120" height="28.87" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-27" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=#000000;strokeColor=#000000;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="-690" width="70" height="27.44" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-28" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;-&amp;nbsp; 1&amp;nbsp; +&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1075" y="-690" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-29" value="$VALOR" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=22;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="-670" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-33" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.x;fontFamily=Helvetica;fontSize=22;fontColor=#000000;strokeColor=#000000;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="-666.87" width="30" height="23.74" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-35" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Helvetica;fontSize=22;fontColor=#000000;strokeColor=#000000;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="-579" width="275" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-48" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagRev;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;fontFamily=Helvetica;fontSize=20;strokeColor=#6c8ebf;strokeWidth=5;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="1057.5" y="-350" width="165" height="30.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-49" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Proceder al pago&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=20;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1007.5" y="-350" width="265" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-37" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=22;fontColor=#000000;strokeColor=#000000;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="-570" width="125" height="30" as="geometry" />
+        </mxCell>
+        <UserObject label="APLICAR" treeRoot="1" id="7uip4uA4HfFoTwR26rns-39">
+          <mxCell style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};fontFamily=Helvetica;fontSize=15;fontColor=#000000;strokeColor=#000000;strokeWidth=5;" vertex="1" parent="1">
+            <mxGeometry x="1160" y="-569" width="100" height="29" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="7uip4uA4HfFoTwR26rns-38" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;CODIGO DE DESCUENTO&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=22;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="-570" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-46" value="" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Helvetica;fontSize=20;fontColor=#000000;strokeColor=#000000;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="-430" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-36" value="" style="line;strokeWidth=2;html=1;fontFamily=Helvetica;fontSize=22;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="-530" width="180" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-41" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Subtotal&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="-520" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-43" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;$VALOR&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=22;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="-520" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-42" value="&lt;b&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;TOTAL&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=22;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="-470" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-40" value="" style="line;strokeWidth=2;html=1;fontFamily=Helvetica;fontSize=22;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1042.5" y="-490" width="190" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-55" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;$VALOR&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=22;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1172.5" y="-475" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-56" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/nuvola2/48x48/actions/camera_test.png;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="-430" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7uip4uA4HfFoTwR26rns-45" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;&quot;&gt;Acepto los &lt;/span&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;Términos y condiciones&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;&quot;&gt; Autorizo a BLACK DIAMOND a procesar mis datos personales para proporcionarme la Membresía completa, dé acuerdo con el &lt;/span&gt;&lt;b style=&quot;&quot;&gt;Aviso de privacidad de BLACK DIAMOND&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=26;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="-420" width="217.5" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
