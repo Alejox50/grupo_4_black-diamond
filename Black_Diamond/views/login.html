@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Diamond</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Diamond</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
 <body>
     <header>
         <div class="top-header">
@@ -60,48 +60,33 @@
         </div>
     </header>
     <main>
-        <div class="nuevo">
-            <div><img src="/images/nuevo.png"></div>
+    <form class="formulario" action="/">  
+        <div>
+            <label class="label">Usuario</label> 
         </div>
-        <div class="articulo-nuevo">
-            <article>
-                <img src="/images/sample.png">
-            </article>
-            <article>
-                <img src="/images/sample.png">
-            </article>
-            <article>
-                <img id="desktop" src="/images/sample.png">
-            </article>
+        <div> 
+            <input class="input" type="text" placeholder="" name="usuario" required>
         </div>
-        <div class="fire">
-            <div><img src="images/sol.png"></div>
-        </div>     
-        <div class="articulo-fire">   
-            <article>
-                <img src="/images/sample.png">
-            </article>
-            <article id="tablet">
-                <img src="/images/sample.png">
-            </article>
-            <article id="tablet">
-                <img src="/images/sample.png">
-            </article>
-            <article id="desktop">
-                <img src="/images/sample.png">
-            </article>
-            <article id="desktop">
-                <img src="/images/sample.png">
-            </article>
-            
+        <br>
+        <div>    
+            <label class="label">Correo Electronico</label>
         </div>
-        <div class="video">
-            <video src="/videos/sample.mp4" controls></video>
+        <div>
+            <input class="input" type="email" placeholder="" name="correo" required>
         </div>
-        <div class="nosotros">
-            <h2>Black Diamond</h2>
-            <p>Somos una empresa especializada en ropa juvenil</p>
+        <br>
+        <div>    
+            <label class="label">Contraseña</label>
         </div>
+        <div>    
+            <input class="input" type="password" placeholder="" name="contraseña" required>
+        </div>
+        <br>
+        <div class="boton">    
+            <a href="/"><button  type="submit">Enviar</button></a>
+            <button  type="reset">Borrar</button>
+        </div>    
+    </form>
     </main>
     <footer>
         <section class="footer">
@@ -120,6 +105,6 @@
             </div>
         </section>
     </footer>
-
 </body>
+
 </html>
