@@ -3,7 +3,9 @@
     box-sizing:border-box;
     margin: 0px;
     padding: 0px;
+    font-family: bebas neue,cursive;
 }
+
 #desktop {
     display: none;
 }
@@ -222,6 +224,9 @@ main {
     display: flex;
     margin: auto;
     flex-flow: column;
+}
+.nosotros{
+    color: white;
 }
 /*                                                      Footer                                                       */
 footer {
