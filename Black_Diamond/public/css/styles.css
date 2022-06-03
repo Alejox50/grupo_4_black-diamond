@@ -349,6 +349,14 @@ main {
 .volveratras{
     background-color: rgba(0, 0, 0, 0.466);
 }
+/*                                                      Product Detail                                               */
+.product-img{
+    width: 400;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.objetodecompra{
+    width: auto;
+}
 /*                                                      Footer                                                       */
 footer {
     background-color: #1c1c1c;
