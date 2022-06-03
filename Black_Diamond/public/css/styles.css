@@ -315,6 +315,40 @@ main {
     background-color: rgba(0, 0, 0, 0.466);
 }
 
+/*                                                      forms                                                     */
+.formulario-register {
+    margin: auto;
+    padding-top: 40px;
+    display:flex;
+    flex-flow: column;
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.formulario-login{
+    margin: auto;
+    padding-top: 40px;
+    display:flex;
+    flex-flow: column;
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.product{
+    margin: auto;
+    padding-top: 40px;
+    display:flex;
+    flex-flow: column;
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.product img{
+    width: 200git px;
+}
+.volveratras{
+    background-color: rgba(0, 0, 0, 0.466);
+}
 /*                                                      Footer                                                       */
 footer {
     background-color: #1c1c1c;
@@ -517,13 +551,4 @@ footer {
     .video {
         padding-top: 50px;
         width:850px;
-    }
-<<<<<<< HEAD
-   
-    
-=======
-    .nosotros {
-        width: 850px;
-    }
->>>>>>> bab903cec5d1e41acc41c0a69417acb634c14743
-}
+    }}

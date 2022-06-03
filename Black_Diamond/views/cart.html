@@ -24,7 +24,7 @@
                             <nav>
                                 <a href="/login"><i class="fas fa-sign-in-alt"></i>Log in</a>
                                 <a href="/register"><i class="fas fa-user-plus"></i>Sign up</a>
-                                <a href="/cart.html"><i class="fas fa-cart-plus"></i>carrito</a>                       
+                                <a href="/cart.html"><i class="fas fa-cart-plus"></i>carrito</a>
                                 <a href="#">Todos</a>
                                 <a href="#">Camisetas</a>
                                 <a href="#">Joggers</a>
@@ -45,7 +45,14 @@
                 </ul>
             </div>
             <div class="buscar">
-                <i class="fas fa-search"></i>
+                    <label for="check-buscar"><i class="fas fa-search"></i></label>
+                    <input type="checkbox" id="check-buscar">
+                    <div class="container-buscar">
+                            <nav>
+                                <input type="text" id="buscar" placeholder="buscar">
+                            </nav>
+                            <label for="check-buscar">✖️</label>
+                    </div>
             </div>
         </div>
         <div class="logo">
@@ -61,11 +68,11 @@
                 <a href="#"><li>Chaquetas</li></a>
                 <a href="#"><li>Sacos</li></a>
             </ul>
-        </div>         
+        </div>
     </header>
     <br>
-    <br>
      <main>
+         <br>
          <div class="volveratras">
             <input type="button" value="Página anterior" onClick="history.go(-1);">
          </div>
@@ -73,7 +80,7 @@
                 <h3>Nombre del producto(s)</h3> 
                 <p>black diamond</p>
                 <div class="objetodecompra">
-                <img src="/images/ropa.jpg">
+                <img src="/images/sample.png">
                 </div>
                
             <div>
@@ -129,8 +136,8 @@
         <section class="footer">
             Contáctanos
             <div class="contactos">
-                <img src="/images/whatsapp.png">
-                <img src="/images/correo.png">
+                <div class="whatsapp"><img src="/images/whatsapp.png"> Whatsapp<br> 3xx-xxx-xxx</div>
+                <div class="correo"><img src="/images/correo.png"> Correo electrónico<br> BlackDiamond@gmail.com</div>
             </div>
         </section>
         <section class="footer">
@@ -141,7 +148,7 @@
                 <img src="/images/twitter.png">
             </div>
         </section>
-    </footer>   
+    </footer>  
     
 </body>
 </html>  
