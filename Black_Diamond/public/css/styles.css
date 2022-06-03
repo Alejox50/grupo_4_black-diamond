@@ -28,7 +28,10 @@ header {
     font-size:20px;
     position: relative;
 }
-
+.links a {
+    text-decoration: none;
+    color: black;
+}
 /*Menù lateral*/
 .menu {
     cursor: pointer;
@@ -112,12 +115,47 @@ header {
     top: 5%;
     right: 8%;
 }
+/*Menú buscar*/
 .buscar {
     padding: 0px 5px;
     position: absolute;
     top: 5%;
     right: 0%;
+    cursor: pointer;
 }
+#check-buscar {
+    display: none;
+}
+.container-buscar {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.466);
+    width: 100vw;
+    height: 10vh;
+    top:0;
+    right: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+#check-buscar:checked ~ .container-buscar{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+.container-buscar nav input {
+    width: 50%;
+    height: 35%;
+    position: absolute;
+    top: 5%;
+    right: 25%;
+}
+.container-buscar label {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+}
+/**/
 .links ul {
     display: flex;
     flex-direction: row-reverse;
@@ -152,11 +190,59 @@ main {
     background-position: center;
     padding-top: 50px;
 }
-.banner img{
-    width: 100%;
-    opacity: 40%;
-    
+.banner{
+	width: 100%;
+	height: 200px;
+	animation: banner 28s infinite linear;
+    transition: all .1s ease-in-out;
+	background-size: cover;
+    background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    border-bottom: 10px black solid;
 }
+.info{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.466);
+    font-size: 25px;
+    color:#fff;
+    align-items: center;
+    display:flex;
+    text-align: center;
+}
+.info h2 {
+    text-align: center;
+}
+@keyframes banner{
+	0%{
+		background-image: url("/images/banner-1.jpg");
+	}
+	25%{
+		background-image: url("/images/banner-1.jpg");
+	}
+	26%{
+		background-image: url("/images/banner-2.jpg");
+	}
+	50%{
+		background-image: url("/images/banner-2.jpg");
+	}
+    51%{
+		background-image: url("/images/banner-3.jpg");
+	}
+	75%{
+		background-image: url("/images/banner-3.jpg");
+	}
+    76%{
+		background-image: url("/images/banner-4.jpg");
+	}
+	100%{
+		background-image: url("/images/banner-4.jpg");
+	}
+}
+
+
 .nuevo {
     display: flex;
     justify-content:center;
@@ -220,14 +306,15 @@ main {
 }
 .nosotros {
     padding: 20px;
+    padding-bottom: 20px;
     width: 300px;
     display: flex;
     margin: auto;
     flex-flow: column;
-}
-.nosotros{
     color: white;
+    background-color: rgba(0, 0, 0, 0.466);
 }
+
 /*                                                      Footer                                                       */
 footer {
     background-color: #1c1c1c;
@@ -246,8 +333,11 @@ footer {
     justify-content: space-around;
 }
 .contactos img{
-    width: 100%;
+    width: 15%;
     padding-top: 20px;
+}
+.whatsapp, .correo {
+    font-size: 20px;
 }
 .redes {
     width: 100px;
@@ -274,6 +364,18 @@ footer {
     }
     main{
         padding-top: 120px;
+    }
+    .banner {
+        height: 300px;
+    }
+    .info {
+        position: relative;
+        font-size: 30px;
+    }
+    .info h2 {
+        position: absolute;
+        top: 15%;
+        left: 3%;
     }
     .articulo-nuevo {
         display: flex;
@@ -303,6 +405,9 @@ footer {
     }
     .video {
         width:550px;
+    }
+    .nosotros {
+        width: 550px;
     }
     footer {
         display: flex;
@@ -375,12 +480,21 @@ footer {
         padding-top: 50px;
         width:700px;
     }
+    .nosotros {
+        width: 700px;
+    }
     .links {
         font-size:15px;
         right: 5%;
     }
 }
 @media (min-width : 992px ){
+    .banner {
+        height: 400px;
+    }
+    .info h2 {
+        font-size: 50px;
+    }
     .articulo-nuevo {
         width:850px;
     
@@ -404,6 +518,12 @@ footer {
         padding-top: 50px;
         width:850px;
     }
+<<<<<<< HEAD
    
     
+=======
+    .nosotros {
+        width: 850px;
+    }
+>>>>>>> bab903cec5d1e41acc41c0a69417acb634c14743
 }
