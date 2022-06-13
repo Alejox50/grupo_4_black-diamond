@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Diamond</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="/css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <%- include('../partials/header')%>
+    <br>
+     <main>
+         <br>
+         <div class="volveratras">
+            <input type="button" value="Página anterior" onClick="history.go(-1);">
+         </div>
+         <form class="product"action="/">   
+                <h3>Nombre del producto(s)</h3> 
+                <p>black diamond</p>
+                <div class="objetodecompra">
+                <img src="/images/sample.png">
+                </div>
+               
+            <div>
+        
+            </div>
+             <div>
+                <h3>Precio</h3>
+                <p class="preciodelproducto">$&nbsp;00.00 VALOR</p>
+            </div>
+            <br>
+            <section>
+            <div><input type="text"  class="codigodedescuento"  placeholder="Código de descuento"><a href="/">
+                <button  type="submit">APLICAR</button></a>
+            </div>
+           
+            
+            <div> 
+                <h4>Subtotal</h4>
+                <p class="preciodelproducto">$&nbsp;00.00 VALOR</p>
+            </div>
+            <div> 
+                <h4>TOTAL</h4>
+                <p class="preciodelproducto">$&nbsp;00.00 VALOR</p>
+            </div>
+            <div class="botondeaceptocondiciones"></div>
+            <input type="checkbox">
+            <label class="inline" for="remember_me">Acepto los Términos y Condiciones Autorizo a BLACK DIAMOND a procesar mis datos personales para proporcionarme la Membresía completa, de acuerdo con el Aviso de Privacidad de BLACK DIAMOND</label>
+            </div>
+           <div><a href="/"><button  type="submit">COMPRAR</button></a></div>
+           </section>
+         </form>
+     </main>
+     <%- include('../partials/footer')%>  
+    
+</body>
+</html>  
