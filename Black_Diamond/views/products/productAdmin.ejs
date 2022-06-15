@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Diamond</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="/css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        
+        <form class="formulario-productos" action="/">
+            <br>  
+            <div>
+                <h2>Administrar Productos</h2>
+            </div>
+            <div class="botones">
+                <button  id="boton" type="submit" onclick="mostrarC();">Crear</button>
+                <button  id="boton" type="submit" onclick="mostrarE();">editar</button>
+            </div>
+            <div class="form-hidden-create" id="form-1">
+                <div >
+                    <label class="label">Nombre del Producto</label> 
+                </div>
+                <div>
+                    <input class="input" type="text" placeholder="" name="nombre-producto" required>
+                </div>
+                <br>
+                <div>
+                    <label class="label">Descripción</label> 
+                </div>
+                <div> 
+                    <input class="input" type="text" placeholder="" name="descripcion" required>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Imagen</label>
+                </div>
+                <div>
+                    <input class="input" type="file" placeholder="" name="imagen" required>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Categoria</label>
+                </div>
+                <br>
+                <div>
+                    <label><input class="check" type="checkbox" name="categoria" >Camisetas</label>
+                    <label><input class="check" type="checkbox" name="categoria" >Joggers</label>
+                    <label><input class="check" type="checkbox" name="categoria" >Jeans</label>
+                    <label><input class="check" type="checkbox" name="categoria" >Chaquetas</label>
+                    <label><input class="check" type="checkbox" name="categoria" >sacos</label>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Tallas</label>
+                </div>
+                <br>
+                <div>
+                    <label><input class="check" type="checkbox" name="talla" >XS</label>
+                    <label><input class="check" type="checkbox" name="talla" >S</label>
+                    <label><input class="check" type="checkbox" name="talla" >M</label>
+                    <label><input class="check" type="checkbox" name="talla" >L</label>
+                    <label><input class="check" type="checkbox" name="talla" >XL</label>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Precio</label>
+                </div>
+                <div>    
+                    <input class="input" type="number" placeholder="" name="precio" required>
+                </div>
+                <br>
+                <div class="boton">    
+                    <button  type="submit">Guardar</button>
+                    <button  type="reset">Borrar</button>
+                </div>
+                <br>
+            </div>
+            <div class="form-hidden-edit" id="form-2">
+                <div >
+                    <label class="label">Buscar Producto</label> 
+                </div>
+                <div>
+                    <input class="input" type="text" placeholder="" name="buscar-producto">
+                </div>
+                <br>
+                <div >
+                    <label class="label">Nombre del Producto</label> 
+                </div>
+                <div>
+                    <input id="nombre-producto" class="input" type="text" placeholder="" name="nombre-producto" required>
+                </div>
+                <br>
+                <div>
+                    <label class="label">Descripción</label> 
+                </div>
+                <div> 
+                    <textarea id="descripcion" class="input" type="text" placeholder="" name="descripcion" required>g</textarea>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Imagen</label>
+                </div>
+                <div>
+                    <img class="imagen" src="/images/camisa-azul.jpg">   
+                </div>
+                <div>
+                    <input class="input" type="file" placeholder="" name="imagen">
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Categoria</label>
+                </div>
+                <br>
+                <div>
+                    <label><input class="check" type="checkbox" name="categoria" >Camisetas</label>
+                    <label><input class="check" type="checkbox" name="categoria" >Joggers</label>
+                    <label><input class="check" type="checkbox" name="categoria" >Jeans</label>
+                    <label><input class="check" type="checkbox" name="categoria" >Chaquetas</label>
+                    <label><input class="check" type="checkbox" name="categoria" >Sacos</label>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Tallas</label>
+                </div>
+                <br>
+                <div>
+                    <label><input class="check" type="checkbox" name="talla" >XS</label>
+                    <label><input class="check" type="checkbox" name="talla" >S</label>
+                    <label><input class="check" type="checkbox" name="talla" >M</label>
+                    <label><input class="check" type="checkbox" name="talla" >L</label>
+                    <label><input class="check" type="checkbox" name="talla" >XL</label>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Precio</label>
+                </div>
+                <div>    
+                    <input id="precio" class="input" type="text" placeholder="" name="precio" required>
+                </div>
+                <br>
+                <div class="boton">    
+                    <button  type="submit">Actualizar</button>
+                    <button  type="reset">Borrar</button>
+                </div>
+                <br>
+            </div>
+            <script>
+                function mostrarC(){
+                    document.getElementById("form-1").style.display = "flex";
+                    document.getElementById("form-2").style.display = "none";
+                    
+                }
+                function mostrarE(){
+                    document.getElementById("form-2").style.display = "flex";
+                    document.getElementById("form-1").style.display = "none";
+                    document.getElementById("nombre-producto").value = "<%= nombre[0] %>";
+                    document.getElementById("descripcion").value = "<%= descripcion[0] %>";
+                    document.getElementById("precio").value = "<%= precio[0] %>";
+                }
+            </script>    
+        </form>
+    </main>
+    <%- include('../partials/footer')%>
+</body>
+
+</html>

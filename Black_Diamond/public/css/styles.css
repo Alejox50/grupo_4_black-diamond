@@ -357,6 +357,63 @@ main {
 .objetodecompra{
     width: auto;
 }
+/*                                                      Product Admin                                                */
+.formulario-productos {
+    margin: auto;
+    padding-top: 40px;
+    display:flex;
+    flex-flow: column;
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.666);
+}
+.formulario-productos .input {
+    width: 30vw;
+}
+.formulario-productos .check {
+    margin:5px;
+}
+.botones {
+    display: flex;
+    flex-flow: column;
+    padding: 5vmax;
+    margin: auto;
+}
+#boton {
+    display: flex;
+    width: 40vw;
+    height: 10vh;
+    justify-content: center;
+    align-items:center;
+    font-size:20px;
+    
+}
+.form-hidden-create {
+    display: none;
+    margin: auto;
+    padding-top: 40px;
+    flex-flow: column;
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.466);
+    margin-bottom: 5vmax;
+    width: 80vw;
+}
+.form-hidden-edit {
+    display: none;
+    margin: auto;
+    padding-top: 40px;
+    flex-flow: column;
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.466);
+    margin-bottom: 5vmax;
+    width: 80vw;
+}
+.imagen {
+    width:40%;
+}
+
 /*                                                      Footer                                                       */
 footer {
     background-color: #1c1c1c;
@@ -469,6 +526,24 @@ footer {
     .redes img{
         padding: 5px ;
     }
+    .botones {
+        justify-content: space-around;
+        flex-flow: row;
+        align-items:center;
+        padding: 5vmax;
+    }
+    #boton {
+        margin: 10px;
+        font-size:20px;
+        
+    }
+    .form-hidden-create {
+        font-size: 20px ;
+    }
+    .form-hidden-edit {
+        font-size: 20px ;
+    }
+
 }
 @media (min-width : 768px ){
     #mobile {
