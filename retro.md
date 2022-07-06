@@ -24,3 +24,17 @@ Debemos encontrar una mayor organizacion, a la hora de realizar el trabajo, tant
 
 ¿Que deberiamos dejar de hacer?
 Dejar de perder el tiempo valioso que podemos dedicar al desarrollo de este proyecto y fomentar mas responsabilidad entre los miembros del equipo de trabajo.
+
+*Retroalimentacion Sprint 3:*
+
+¿Que hicimos mal?
+Mal manejo del tiempo, poca interaccion entre el equipo
+
+¿Que hicimos bien?
+Realizamos casi todas las actividades requeridas en el sprint
+
+¿Que deberiamos empezar a hacer?
+Reunirnos más, y profundizar en las habilidades de cada uno
+
+¿Que deberiamos dejar de hacer?
+Perder el tiempo, dedicar más tiempo al estudio y al desarrollo en equipo del proyecto
