@@ -8,10 +8,12 @@ const rutasProduct = require('./routes/product.js');
 app.listen(process.env.PORT || 3001, function() {
 console.log('Servidor corriendo en el puerto 3001')
 });
+app.use(express.urlencoded({ extended: false }));
+
+app.use(express.json());
+
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs')
 
-app.use("/",rutasUser)
-app.use("/",rutasProduct)
-app.use('/', rutasMain)
+app.use("/",rutasUser, rutasProduct, rutasMain)

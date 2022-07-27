@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%> 
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <div class="background-productos">
+        <br>
+        <br>
+        <div class="titulo-producto">
+            <h2>Productos</h2>
+        </div>
+        <br>
+        
+        <% for(let i =0; i < products.length; i++) { %>
+            <div class="productos">
+                <section class="product-box">
+                        <figure class="imagen">
+                            <img src="/images/productos/<%= products[i].image ? products[i].image :"default.png" %>" alt="imagen de producto">
+                        </figure>
+                        <article class="">
+                            <p><%= products[i].name %></p>
+                            <h2>$<%= products[i].price %></h2>
+                            <span><%= products[i].discount %>% de descuento</span>
+                            
+                        </article>
+                    </a>
+                </section>
+            </div>
+            <br>
+        <% } %>
+    </div>
+    </main>
+    <%- include('../partials/footer')%>
+</body>
+
+</html>

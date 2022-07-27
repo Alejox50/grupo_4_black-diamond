@@ -414,6 +414,34 @@ main {
     width:40%;
 }
 
+/*                                                      Products                                                     */
+.background-productos {
+    background-color:#1f1f1f75;
+}
+.titulo-producto h2 {
+    font-size:45px;
+    text-align: center;
+    color: #fff;
+}
+.productos {
+    background-color: #c7c7c783;
+    margin: 10px;
+}
+.productos .imagen img{
+    max-height: 200px;
+}
+
+.form-create {
+    display: flex;
+    margin: auto;
+    padding-top: 40px;
+    flex-flow: column;
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.466);
+    margin-bottom: 5vmax;
+    width: 80vw;
+}
 /*                                                      Footer                                                       */
 footer {
     background-color: #1c1c1c;

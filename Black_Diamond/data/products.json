@@ -1,0 +1,92 @@
+[
+ {
+  "id": 1,
+  "name": "Camiseta manga larga azul",
+  "price": 60000,
+  "discount": 50,
+  "category": "Camisetas",
+  "description": "",
+  "image": "",
+  "color": "Azul"
+ },
+ {
+  "id": 2,
+  "name": "Jogger negro estampado",
+  "price": 110000,
+  "discount": 3,
+  "category": "Joggers",
+  "description": "",
+  "image": "",
+  "color": "Negro"
+ },
+ {
+  "id": 3,
+  "name": "Jean azul basico",
+  "price": 79000,
+  "discount": 25,
+  "category": "Jeans",
+  "description": "",
+  "image": "",
+  "color": "Azul"
+ },
+ {
+  "id": 4,
+  "name": "Chaqueta basica negra",
+  "price": 90000,
+  "discount": 10,
+  "category": "Chaquetas",
+  "description": "",
+  "image": "",
+  "color": "Negro"
+ },
+ {
+  "id": 5,
+  "name": "Saco rojo estampado",
+  "price": 70000,
+  "discount": 20,
+  "category": "sacos",
+  "description": "",
+  "image": "",
+  "color": "Rojo"
+ },
+ {
+  "name": "ff",
+  "price": "3",
+  "category": "on",
+  "description": "                    ff"
+ },
+ {
+  "name": "camisa",
+  "price": "3",
+  "discount": "34",
+  "category": "on",
+  "description": "                    Hola",
+  "color": "rojo"
+ },
+ {
+  "name": "Ejem",
+  "price": "4",
+  "discount": "10",
+  "category": "on",
+  "description": "                    Imagen",
+  "color": "rojo"
+ },
+ {
+  "name": "imagen",
+  "price": "16",
+  "discount": "20",
+  "category": "on",
+  "description": "                    gg",
+  "color": "azul",
+  "image": "product-1658956945407.png"
+ },
+ {
+  "name": "df",
+  "price": "7",
+  "discount": "2",
+  "category": "on",
+  "description": "                  ggggg  ",
+  "color": "verde",
+  "image": "product-1658957289192.png"
+ }
+]

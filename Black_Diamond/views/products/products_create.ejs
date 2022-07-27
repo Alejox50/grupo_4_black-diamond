@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%> 
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <br>
+        <br>
+        <form action="/products" method="POST" enctype="multipart/form-data">
+            <div class="form-create" id="form-1">
+                <div >
+                    <label class="label">Nombre del Producto</label> 
+                </div>
+                <div>
+                    <input class="input" type="text" placeholder="" id="producto" name="producto" required>
+                </div>
+                <br>
+                <div>
+                    <label class="label">Descripción</label> 
+                </div>
+                <div> 
+                    <textarea class="input" type="text" placeholder="" id="descripcion" name="descripcion" required>
+                    </textarea>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Imagen</label>
+                </div>
+                <div>
+                    <input class="input" type="file" placeholder="" id="imagen" name="imagen">
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Categoria</label>
+                </div>
+                <br>
+                <div>
+                    <label><input class="check" type="checkbox" id="categoria" name="categoria" >Camisetas</label>
+                    <label><input class="check" type="checkbox" id="categoria" name="categoria" >Joggers</label>
+                    <label><input class="check" type="checkbox" id="categoria" name="categoria" >Gorras</label>
+                    <label><input class="check" type="checkbox" id="categoria" name="categoria" >Chaquetas</label>
+                    <label><input class="check" type="checkbox" id="categoria" name="categoria" >sacos</label>
+                </div>
+                <br>
+                <div >
+                    <label class="label">Descuento</label> 
+                </div>
+                <div>
+                    <input class="input" type="text" placeholder="" id="descuento" name="descuento" required>
+                </div>
+                <br>
+                <div >
+                    <label class="label">Color</label> 
+                </div>
+                <div>
+                    <input class="input" type="text" placeholder="" id="color" name="color" required>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Tallas</label>
+                </div>
+                <br>
+                <div>
+                    <label><input class="check" type="checkbox" name="talla" >XS</label>
+                    <label><input class="check" type="checkbox" name="talla" >S</label>
+                    <label><input class="check" type="checkbox" name="talla" >M</label>
+                    <label><input class="check" type="checkbox" name="talla" >L</label>
+                    <label><input class="check" type="checkbox" name="talla" >XL</label>
+                </div>
+                <br>
+                <div>    
+                    <label class="label">Precio</label>
+                </div>
+                <div>    
+                    <input class="input" type="number" placeholder="" id="precio" name="precio" required>
+                </div>
+                <br>
+                <div class="boton">    
+                    <button  type="submit">Guardar</button>
+                    <button  type="reset">Borrar</button>
+                </div>
+                <br>
+            </div>
+        </form>
+        
+    </main>
+    <%- include('../partials/footer')%>
+</body>
+
+</html>
