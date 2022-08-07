@@ -34,7 +34,7 @@ let productController = {
 		res.render("./products/products", {"products" : products})
     },
     create: function(req,res) {
-        res.render('./products/products_create')
+        res.render('./products/productAdmin')
     },
     product: function(req,res) {
         if (req.file) {
@@ -53,8 +53,11 @@ let productController = {
             res.redirect("/products/");
         }
         else {
-            res.render('./products/products_create')
+            res.render('./products/productAdmin')
         }
+    },
+    delete: function(req,res) {
+        
     }
 
 };

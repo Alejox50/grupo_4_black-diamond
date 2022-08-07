@@ -2,56 +2,9 @@
 <html lang="en">
     <%- include('../partials/head')%> 
 <body>
-    <header>
-        <div class="top-header">
-            <div id="mobile">
-                <div class="menu">
-                    <label for="check-menu"><i class="fas fa-chevron-circle-down"></i></label>
-                </div>
-                <input type="checkbox" id="check-menu">
-                    <div class="container-menu">
-                        <div class="cont-menu">
-                            <nav>
-                        
-                                <a href="/register"><i class="fas fa-user-plus"></i>Sign up</a>
-                                <a href="/cart"><i class="fas fa-cart-plus"></i>carrito</a>
-                                <a href="#">Todos</a>
-                                <a href="#">Camisetas</a>
-                                <a href="#">Joggers</a>
-                                <a href="#">Jeans</a>
-                                <a href="#">Chaquetas</a>
-                                <a href="#">Sacos</a>
-                            </nav>
-                            <label for="check-menu">✖️</label>
-                        </div>
-                    </div>
-            </div>
-            <div class="links">
-                <i id="mobile" class="fas fa-cart-plus"></i>
-                <ul id="desktop">
-                    <li><a href="/register"><i class="fas fa-user-plus"></i>Sign up</a></li>
-                    <li><a href="/cart"><i class="fas fa-cart-plus"></i>Carrito</a></li>
-                    
-                </ul>
-            </div>
-            <div class="buscar">
-                    <label for="check-buscar"><i class="fas fa-search"></i></label>
-                    <input type="checkbox" id="check-buscar">
-                    <div class="container-buscar">
-                            <nav>
-                                <input type="text" id="buscar" placeholder="buscar">
-                            </nav>
-                            <label for="check-buscar">✖️</label>
-                    </div>
-            </div>
-        </div>
-        <div class="logo">
-            <a href = "/"><img class="logo-mobile" src="/images/BD mobile.png"></a>
-            <a href="/"><img class="logo-desktop" src="/images/BD.png"></a>
-        </div>
-        </header>                 
+    <%- include('../partials/headerLogin')%>       
     <main>
-        <form class="formulario-login" action="/">  
+        <form class="formulario-login" action="/login" method="POST">  
         <section>
             <h4>Iniciar Sesión</h4>
             <input class="login-control" type ="emeil" name="correo" id="correo"placeholder="Ingrese su Correo">

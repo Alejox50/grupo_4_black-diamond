@@ -100,14 +100,16 @@ header {
 /**/
 .logo {
     margin: auto;
-    width: 200px;
+    width: 100px;
     justify-content: center;
 }
 .logo img {
-    width: 100%;
+    width: 40%;
 }
 .logo-desktop{
-    display: none;
+    margin:auto;
+    width:100px;
+    
 }
 .links{
     padding: 0px 5px;
