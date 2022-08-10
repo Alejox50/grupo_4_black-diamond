@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const rutasMain = require('./routes/main.js');
-const rutasUser = require('./routes/user.js');
+const rutasUser = require('./routes/userRoutes.js');
 const rutasProduct = require('./routes/product.js');
 const session = require('express-session');
 
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
-app.use(express.static("public"));
+app.use(express.static("./public"));
 app.set('view engine', 'ejs')
 
 app.use("/",rutasUser, rutasProduct, rutasMain)

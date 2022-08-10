@@ -1,57 +1,77 @@
 [
-    {
-        "id":1,
-        "firstName": "Vidal", 
-        "lastName": "Beltran",
-        "email": "vidal@gmail.com",
-        "password": "12345",
-        "category": "admin",
-        "image":    "admin_1.jpg"
-    },
-    {
-        "id":2,
-        "firstName": "Ingrid", 
-        "lastName": "Pardo",
-        "email": "Pardo@gmail.com",
-        "password": "2432756",
-        "category": "admin",
-        "image":    "admin_2.jpg"
-    },
-    {
-        "id":3,
-        "firstName": "Andres", 
-        "lastName": "Jurado",
-        "email": "Jurado@gmail.com",
-        "password": "5547657",
-        "category": "user",
-        "image":    "user_3.jpg"
-    },
-    {
-        "id":4,
-        "firstName": "Jon", 
-        "lastName": "Albert",
-        "email": "Albert@gmail.com",
-        "password": "6574567",
-        "category": "user",
-        "image":    "user_4.jpg"
-    },
-    {
-        "id":5,
-        "firstName": "Alberto", 
-        "lastName": "Beltran",
-        "email": "Beltran@gmail.com",
-        "password": "657356",
-        "category": "user",
-        "image":    "user_5.jpg"
-    },
-    {
-        "id":6,
-        "firstName": "Laura", 
-        "lastName": "Quintana",
-        "email": "Quintana@gmail.com",
-        "password": "455655",
-        "category": "user",
-        "image":    "user_6.jpg"
-    }
-
+ {
+  "id": 1,
+  "firstName": "Vidal",
+  "lastName": "Beltran",
+  "email": "vidal@gmail.com",
+  "password": "12345",
+  "category": "admin",
+  "image": "admin_1.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Ingrid",
+  "lastName": "Pardo",
+  "email": "Pardo@gmail.com",
+  "password": "2432756",
+  "category": "admin",
+  "image": "admin_2.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Andres",
+  "lastName": "Jurado",
+  "email": "Jurado@gmail.com",
+  "password": "5547657",
+  "category": "user",
+  "image": "user_3.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Jon",
+  "lastName": "Albert",
+  "email": "Albert@gmail.com",
+  "password": "6574567",
+  "category": "user",
+  "image": "user_4.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Alberto",
+  "lastName": "Beltran",
+  "email": "Beltran@gmail.com",
+  "password": "657356",
+  "category": "user",
+  "image": "user_5.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Laura",
+  "lastName": "Quintana",
+  "email": "Quintana@gmail.com",
+  "password": "455655",
+  "category": "user",
+  "image": "user_6.jpg"
+ },
+ {
+  "id": 7,
+  "nombres": "Alejandro",
+  "apellidos": "Rodas",
+  "correo": "vidal@gmail.com",
+  "contraseÃ±a": "123123"
+ },
+ {
+  "id": 8,
+  "nombres": "Juan",
+  "apellidos": "juan",
+  "correo": "",
+  "password": ""
+ },
+ {
+  "id": 9,
+  "nombres": "Juan",
+  "apellidos": "juan",
+  "correo": "asdad@gmail.com",
+  "password": "00010101"
+ }
 ]

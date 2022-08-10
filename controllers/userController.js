@@ -1,12 +1,19 @@
+const { validationResult } = require("express-validator");
 const path = require("path");
-
+const User = require ('../models/User')
 let userController = {
+    
+    
     login: function(req, res) {
         res.render('./users/login')
     },
+    
+    
     register: function(req, res) {
         res.render('./users/register')
     },
+    
+    
     processLogin: function(req,res) {
         let errors = validationResult(req);
 
@@ -39,7 +46,21 @@ let userController = {
         }else{
             return res.render('login', {errors: errors.errors})
         }
+    },
+   
+   
+    processRegister: (req,res) => {
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0) {
+        return res.render('./users/register', {
+            errors: resultValidation.mapped(),
+            oldData:req.body
+        });
     }
-};
+    User.create(req.body);
+    return res.send('Ok, se guardo el usuario');
+}
+}
 
 module.exports = userController;
