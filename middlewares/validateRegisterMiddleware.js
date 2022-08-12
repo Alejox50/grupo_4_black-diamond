@@ -1,6 +1,6 @@
 const path = require ('path');
-const { body } = require('express-validator');
-const multer = ('multer')
+const { check: body } = require('express-validator');
+
 
 module.exports = [
     body('nombres').notEmpty().withMessage('Tienes que escribir un nombre'),

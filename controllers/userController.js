@@ -58,8 +58,9 @@ let userController = {
             oldData:req.body
         });
     }
-    User.create(req.body);
-    return res.send('Ok, se guardo el usuario');
+    req.file.filename
+    User.create({filename: req.file.filename, ...req.body});
+    res.redirect('/login');
 }
 }
 

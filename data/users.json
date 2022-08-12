@@ -73,5 +73,27 @@
   "apellidos": "juan",
   "correo": "asdad@gmail.com",
   "password": "00010101"
+ },
+ {
+  "id": 10,
+  "nombres": "Juan",
+  "apellidos": "Rodas",
+  "correo": "juanrodas@gmail.com",
+  "password": "asdasdasd"
+ },
+ {
+  "id": 11,
+  "nombres": "a",
+  "apellidos": "b",
+  "correo": "c@gmail.com",
+  "password": "1234"
+ },
+ {
+  "id": 12,
+  "filename": "1660334417773_img.jpg",
+  "nombres": "a",
+  "apellidos": "b",
+  "correo": "c@gmail.com",
+  "password": "1234"
  }
 ]
