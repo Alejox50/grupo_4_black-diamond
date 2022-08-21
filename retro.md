@@ -38,3 +38,32 @@ Reunirnos más, y profundizar en las habilidades de cada uno
 
 ¿Que deberiamos dejar de hacer?
 Perder el tiempo, dedicar más tiempo al estudio y al desarrollo en equipo del proyecto
+
+
+*Retroalimentacion Sprint 4:*
+
+¿Que hicimos mal?
+Mal manejo del tiempo, poca interaccion entre el equipo
+
+¿Que hicimos bien?
+Nada
+
+¿Que deberiamos empezar a hacer?
+Reunirnos más, y profundizar en las habilidades de cada uno
+
+¿Que deberiamos dejar de hacer?
+Perder el tiempo, dedicar más tiempo al estudio y al desarrollo en equipo del proyecto.
+
+*Retroalimentacion Sprint 5:*
+
+¿Que hicimos mal?
+Mal manejo del tiempo.
+
+¿Que hicimos bien?
+Nos comprometimos a ponernos al dia
+
+¿Que deberiamos empezar a hacer?
+Reunirnos más.
+
+¿Que deberiamos dejar de hacer?
+Perder el tiempo.
