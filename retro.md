@@ -67,3 +67,17 @@ Reunirnos más.
 
 ¿Que deberiamos dejar de hacer?
 Perder el tiempo.
+
+*Retroalimentacion Sprint 5:*
+
+¿Que hicimos mal?
+mal manejo de los temas ya que notenemos el concocimiento pra terminar lo requerido
+
+¿Que hicimos bien?
+Realizamos casi todas las actividades requeridas en el sprint haciendonos falta solo una en la cual seguimos trabajando en ella
+
+¿Que deberiamos empezar a hacer?
+tener mas conocimiento de los temas ver la clases que han pasado y estar al dia en la pltafroma ya que son muchos para llevarlos al 100%
+
+¿Que deberiamos dejar de hacer?
+Perder el tiempo, dedicar más tiempo al estudio y al desarrollo en equipo del proyecto
