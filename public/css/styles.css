@@ -260,14 +260,15 @@ main {
 .articulo-nuevo {
     display: flex;
     justify-content:center;
-    width:300px;
-    margin: auto;
+    width:500px;
+    margin: center;
     flex-flow: column;
     padding-top: 40px;
 
 }
 .articulo-nuevo img{
-    width: 100%;
+    width: 400px;
+    height: 500px;
 }
 .fire {
     padding-top: 20px;
