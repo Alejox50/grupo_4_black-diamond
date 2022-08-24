@@ -68,7 +68,7 @@ Reunirnos más.
 ¿Que deberiamos dejar de hacer?
 Perder el tiempo.
 
-*Retroalimentacion Sprint 5:*
+*Retroalimentacion Sprint 6:*
 
 ¿Que hicimos mal?
 mal manejo de los temas ya que notenemos el concocimiento pra terminar lo requerido
