@@ -95,5 +95,13 @@
   "apellidos": "b",
   "correo": "c@gmail.com",
   "password": "1234"
+ },
+ {
+  "id": 13,
+  "filename": "1661561719136_img.jpg",
+  "nombres": "Fernando",
+  "apellidos": "Torres",
+  "correo": "flacoo1202@gmail.com",
+  "password": "eeYZNMNgy9g2QFL"
  }
 ]
