@@ -1,19 +1,46 @@
 const express = require('express');
 const userController = require('../controllers/userController.js');
 const upload = require('../middlewares/multerMiddleware');
-const validateRegisterMiddleware = require('../middlewares/validateRegisterMiddleware');
-
-const validations = require('../middlewares/validateRegisterMiddleware')
+const validations = require('../middlewares/validateRegisterMiddleware');
+const { body } = require('express-validator');
 //const { dirname } = require('path');
 const router = express.Router();
 
+const validateRegister = [
+    body('nombres')
+        .notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('apellidos')
+        .notEmpty().withMessage('Tienes que escribir un apellido'),
+    body('correo')
+        .notEmpty().withMessage('Tienes que escribir un correo electronico').bail()
+        .isEmail().withMessage('Debes escribir un formato de correo valido'),
+    body('password')
+        .notEmpty().withMessage('Tienes que escribir una contraseña')
+        .isLength({ min:8 }).withMessage('La contraseña debe tener minimo 8 caracteres'),
+    body('imagenUsuario')
+        .custom((value, { req }) =>  {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+            }
+        }
 
-router.get("/login", userController.login)
-router.get("/register", userController.register)
+        return true;
+        })
+]
+
+
+router.get("/login", userController.login);
+router.get("/register", userController.register);
 
 router.post("/login", userController.processLogin);
-router.post('/register', upload.single('imagenUsuario'), validations, userController.processRegister);
-
+//router.post('/register', upload.single('imagenUsuario'), validations, userController.processRegister);
+router.post('/',validateRegister, userController.processRegister)
 
 
 

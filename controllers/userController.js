@@ -1,11 +1,12 @@
 const { validationResult } = require("express-validator");
 const path = require("path");
-const User = require ('../models/User')
+const User = require ('../models/user');
+const fs = require ('fs');
 let userController = {
     
     
     login: function(req, res) {
-        res.render('./users/login')
+        res.render('login')
     },
     
     
@@ -43,14 +44,15 @@ let userController = {
 
             req.session.usuarioLogueado = usuarioALoguearse;
             res.render('success');
-        }else{
+        } else {
             return res.render('login', {errors: errors.errors})
         }
     },
    
    
     processRegister: (req,res) => {
-        const resultValidation = validationResult(req);
+
+     const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0) {
         return res.render('./users/register', {
@@ -59,8 +61,8 @@ let userController = {
         });
     }
     req.file.filename
-    User.create({filename: req.file.filename, ...req.body});
-    res.redirect('/login');
+    user.create({filename: req.file.filename, ...req.body});
+    res.redirect('/login'); 
 }
 }
 

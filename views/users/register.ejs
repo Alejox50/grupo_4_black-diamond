@@ -2,7 +2,17 @@
 <html lang="en">
     <%- include('../partials/head')%> 
 <body>
-    <%- include('../partials/headerRegister')%>           
+    <%- include('../partials/headerRegister')%>          
+    <% if (typeof errors != 'undefined')  { %> 
+        <p style='color:red'>ERROR</p>
+        <ul>
+            <% for (let i= o; i < errors.length; i++) { %> 
+                <li>
+                    <% errors[i].msg %> 
+                </li>
+            <% } %> 
+        </ul>  
+    <% } %>     
     <main>
         <form class="formulario-register" action="/register" method="POST" enctype="multipart/form-data">  
         <section>

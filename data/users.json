@@ -111,5 +111,21 @@
   "apellidos": "Rodas",
   "correo": "alejandro@gmail.com",
   "password": "123123123"
+ },
+ {
+  "id": 15,
+  "filename": "1663780772448_img.jpg",
+  "nombres": "Alejandro",
+  "apellidos": "Rodas",
+  "correo": "alejandro@gmail.com",
+  "password": "32423423"
+ },
+ {
+  "id": 16,
+  "filename": "1663780966822_img.jpg",
+  "nombres": "Alejandro",
+  "apellidos": "Rodas",
+  "correo": "vidal@gmail.com",
+  "password": "asdasdad"
  }
 ]

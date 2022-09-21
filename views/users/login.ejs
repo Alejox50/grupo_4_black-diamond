@@ -2,12 +2,22 @@
 <html lang="en">
     <%- include('../partials/head')%> 
 <body>
-    <%- include('../partials/headerLogin')%>       
+    <%- include('../partials/headerLogin')%> 
+    <% if (typeof errors != 'undefined')  { %> 
+        <p style='color:red'>ERROR</p>
+        <ul>
+            <% for (let i= o; i < errors.length; i++) { %> 
+                <li>
+                    <% errors[i].msg %> 
+                </li>
+            <% } %> 
+        </ul>  
+    <% } %>    
     <main>
         <form class="formulario-login" action="/login" method="POST">  
         <section>
             <h4>Iniciar Sesión</h4>
-            <input class="login-control" type ="emeil" name="correo" id="correo"placeholder="Ingrese su Correo">
+            <input class="login-control" type ="emeil" name="email" id="email"placeholder="Ingrese su Correo">
             <input class="login-control" type ="password" name="contraseña" id="contraseña"placeholder="Ingrese su contraseña">
             <p>Estoy de acuerdo con: <a href="#">Terminos y condiciones</a></p>
             <input class="botonsre" type="submit" value="Ingresar">
