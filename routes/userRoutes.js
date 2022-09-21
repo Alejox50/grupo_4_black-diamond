@@ -3,6 +3,7 @@ const userController = require('../controllers/userController.js');
 const upload = require('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegisterMiddleware');
 const { body } = require('express-validator');
+
 //const { dirname } = require('path');
 const router = express.Router();
 
@@ -38,7 +39,7 @@ const validateRegister = [
 router.get("/login", userController.login);
 router.get("/register", userController.register);
 
-router.post("/login", userController.processLogin);
+router.post('/login', userController.processLogin);
 //router.post('/register', upload.single('imagenUsuario'), validations, userController.processRegister);
 router.post('/',validateRegister, userController.processRegister)
 
