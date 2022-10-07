@@ -1,25 +1,18 @@
 const express = require('express');
-const userController = require('../controllers/userController.js');
+const userController = require('./../controllers/userController');
 const upload = require('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegisterMiddleware');
-const { body } = require('express-validator');
+const { body, validationResult  } = require('express-validator');
 
 //const { dirname } = require('path');
 const router = express.Router();
 
 const validateRegister = [
-    body('nombres')
-        .notEmpty().withMessage('Tienes que escribir un nombre'),
-    body('apellidos')
-        .notEmpty().withMessage('Tienes que escribir un apellido'),
-    body('correo')
-        .notEmpty().withMessage('Tienes que escribir un correo electronico').bail()
-        .isEmail().withMessage('Debes escribir un formato de correo valido'),
-    body('password')
-        .notEmpty().withMessage('Tienes que escribir una contraseña')
-        .isLength({ min:8 }).withMessage('La contraseña debe tener minimo 8 caracteres'),
-    body('imagenUsuario')
-        .custom((value, { req }) =>  {
+    body('nombres').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('apellidos').notEmpty().withMessage('Tienes que escribir un apellido'),
+    body('correo').notEmpty().withMessage('Tienes que escribir un correo electronico').bail().isEmail().withMessage('Debes escribir un formato de correo valido'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({ min:8 }).withMessage('La contraseña debe tener minimo 8 caracteres'),
+    body('imagenUsuario').custom((value, { req }) =>  {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
         if (!file) {
@@ -36,8 +29,13 @@ const validateRegister = [
 ]
 
 
+
+
 router.get("/login", userController.login);
-router.get("/register", userController.register);
+
+router.post("/register", validateRegister ,userController.save);
+
+router.get('/register',userController.register)
 
 router.post('/login', userController.processLogin);
 //router.post('/register', upload.single('imagenUsuario'), validations, userController.processRegister);
