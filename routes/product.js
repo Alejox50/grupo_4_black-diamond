@@ -21,6 +21,12 @@ router.get("/products", productController.products)
 
 router.get("/product/create", productController.create)
 
+router.get("/camisetas", productController.camisetas)
+router.get("/busos", productController.busos)
+router.get("/gorras", productController.gorras)
+router.get("/jeans", productController.jeans)
+router.get("/joggers", productController.joggers)
+
 router.post("/products",upload.single("imagen"), productController.product)
 
 router.delete("/products/:id/eliminar", (req,res) => {});
