@@ -1,18 +1,7 @@
-const conf_db_host = "localhost",
-  conf_db_name = "blackdiamond_db",
-  conf_user = "root",
-  conf_password = "alejo147",
-  conf_port = "3306";
-module.exports = {
-  conf_db_host: conf_db_host,
-  conf_db_name: conf_db_name,
-  conf_user: conf_user,
-  conf_password: conf_password,
-  conf_port: conf_port,
-};
-/* module.exports = {
+ module.exports = {
   "development": {
     "username": "root",
+    "port": "3306",
     "password": 'root',
     "database": "blackdiamond_db",
     "host": "127.0.0.1",
@@ -20,6 +9,7 @@ module.exports = {
   },
   "test": {
     "username": "root",
+    "port": "3306",
     "password": 'root',
     "database": "blackdiamond_db",
     "host": "127.0.0.1",
@@ -27,9 +17,10 @@ module.exports = {
   },
   "production": {
     "username": "root",
-    "password": null,
+    "port": "3306",
+    "password": 'root',
     "database": "blackdiamond_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
-} */
+} 
