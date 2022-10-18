@@ -23,12 +23,5 @@ module.exports = (sequelize, dataTypes) => {
 
     const talla = sequelize.define(alias, cols, config);
 
-    talla.associate = function(models) {
-        talla.hasMany(models.productos, {
-            as: "products",
-            foreignKey: "SizeId"
-        })
-    };    
-
     return talla;
 }
