@@ -12,11 +12,13 @@ const validateRegister = [
     body('apellidos').notEmpty().withMessage('Tienes que escribir un apellido'),
     body('correo').notEmpty().withMessage('Tienes que escribir un correo electronico').bail().isEmail().withMessage('Debes escribir un formato de correo valido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({ min:8 }).withMessage('La contraseña debe tener minimo 8 caracteres'),
-    body('imagenUsuario').custom((value, { req }) =>  {
-        let file = req.file;
+    /*body('imagenUsuario').custom((value, { req })  =>  {
+        let file = req.body.imagenUsuario;
+        console.log(req.body.imagenUsuario,'lollololol')
+        console.log(value,"el baliu")
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
         if (!file) {
-            throw new Error('Tienes que subir una imagen');
+            throw new Error('Tenes que subir una imagen');
         } else {
             let fileExtension = path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtension)) {
@@ -25,7 +27,7 @@ const validateRegister = [
         }
 
         return true;
-        })
+        })*/
 ]
 
 

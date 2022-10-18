@@ -1,6 +1,6 @@
 'use strict';
 
-const fs = require('fs');
+/*const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
@@ -34,4 +34,23 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-module.exports = db;
+module.exports = db;*/
+
+const db_data = require('./../config/config');
+const Sequelize   = require('sequelize');
+const sequelize   = new Sequelize( db_data.conf_db_name, db_data.conf_user, db_data.conf_password, { 
+    host: db_data.conf_db_host,
+    dialect: 'mysql',
+    port: db_data.conf_port,
+    dialectOptions: {
+        multipleStatements: true
+    }
+});
+module.exports = sequelize;
+sequelize.authenticate().then(() => {
+    console.log('conectando')
+}).catch(err => {
+    console.error('error de conexion', err)
+})
+
+module.exports = sequelize;

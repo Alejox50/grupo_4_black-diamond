@@ -3,9 +3,9 @@ const path = require("path");
 //const user = require ('../models/user');
 const fs = require("fs");
 const bcrypt = require("bcrypt");
-const conexion = require("./../database/models/index.js");
+//const conexion = require("./../database/models/index.js");
 const { type } = require("os");
-const { sequelize } = require("./../database/models/index.js");
+const sequelize  = require("./../database/models/index.js");
 
 let userController = {
   save: function (req, res) {
@@ -16,11 +16,12 @@ let userController = {
       const usuario = req.body.nombres;
       const apellido = req.body.apellidos;
       const email = req.body.correo;
-      console.log("llegue al user controler");
-      /*conexion.query('INSERT INTO usuario (nombres,apellido, email) VALUES(?,?,?)',{
-            replacements: [usuario, apellido, email],
+      const password = req.body.password;
+      console.log("llegue al user controller");
+      sequelize.query('INSERT INTO usuarios (nombre,apellido,correo,password) VALUES(?,?,?,?)',{
+            replacements: [usuario, apellido, email, password],
             type:sequelize.QueryTypes.INSERT
-        })*/
+        });
     } else {
       console.log("hay errores");
       return res.status(409).send(errors);

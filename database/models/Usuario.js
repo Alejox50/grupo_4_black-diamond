@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = "usuario";
+    let alias = "usuarios";
 
     let cols = {
         idUser:{
@@ -13,11 +13,15 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Apelido:{
+        Apellido:{
             type: dataTypes.STRING(100),
             allowNull: false
         },
         Correo:{
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        Password:{
             type: dataTypes.STRING(100),
             allowNull: false
         }
