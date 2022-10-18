@@ -317,6 +317,9 @@ main {
     color: white;
     background-color: rgba(0, 0, 0, 0.466);
 }
+.text-center{
+    text-align:center;
+}
 
 /*                                                      forms                                                     */
 /*FORMULARIO DE REGISTRO  */
@@ -417,18 +420,7 @@ main {
     font-size: 16px;
 
 }
-.product{
-    margin: auto;
-    padding-top: 40px;
-    display:flex;
-    flex-flow: column;
-    text-align: center;
-    color:white;
-    background-color: rgba(0, 0, 0, 0.466);
-}
-.product img{
-    width: 200git px;
-}
+
 .volveratras{
     background-color: rgba(0, 0, 0, 0.466);
 }
@@ -506,13 +498,35 @@ main {
     text-align: center;
     color: #fff;
 }
-.productos {
-    background-color: #c7c7c783;
-    margin: 10px;
+/*.productos img {
+    width: 150px;
 }
 .productos .imagen img{
     max-height: 200px;
 }
+.product{
+    margin: auto;
+    padding-top: 40px;
+    display:flex;
+    flex-flow: column;
+    text-align: center;
+    color:black;
+    background-color: rgba(0, 0, 0, 0.466);
+}*/
+.product img{
+    width: 150px;
+}
+.product h3{
+    font-size: 1.7em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.card {
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0,0,24);
+}
+
 
 .form-create {
     display: flex;

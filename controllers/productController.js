@@ -58,7 +58,23 @@ let productController = {
     },
     delete: function(req,res) {
         
+    },
+    camisetas: function(req, res) {
+        res.render('./products/camisetas')
+    },
+    busos: function(req, res) {
+        res.render('./products/busos')
+    },
+    gorras: function(req, res) {
+        res.render('./products/gorras')
+    },
+    joggers: function(req, res) {
+        res.render('./products/joggers')
+    },
+    jeans: function(req, res) {
+        res.render('./products/jeans')
     }
+    
 
 };
 
