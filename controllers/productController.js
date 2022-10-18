@@ -50,7 +50,7 @@ let productController = {
             product.image = req.file.filename
             products.push(product)
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect("/products/");
+            res.redirect("./database/models/Productos.js");
         }
         else {
             res.render('./products/productAdmin')

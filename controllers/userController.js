@@ -3,9 +3,9 @@ const path = require("path");
 //const user = require ('../models/user');
 const fs = require("fs");
 const bcrypt = require("bcrypt");
-const conexion = require("./../database/models/index");
+const conexion = require("./../database/models/index.js");
 const { type } = require("os");
-const { sequelize } = require("./../database/models/index");
+const { sequelize } = require("./../database/models/index.js");
 
 let userController = {
   save: function (req, res) {
@@ -39,7 +39,7 @@ let userController = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      let usersJSON = fs.readFileSync("./data/users.json", {
+      let usersJSON = fs.readFileSync("./database/models/Usuario.js", {
         encoding: "UTF-8",
       });
       let users;
