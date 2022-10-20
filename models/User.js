@@ -2,10 +2,10 @@ const fs = require('fs');
 const { use, all } = require('../routes/main');
 
 const User = {
-    fileName: './data/users.json',
+    fileName: './Black_diamond_BD/blackdiamond_db.sql',
 
     getData: function() {
-        return JSON.parse (fs.readFileSync(this.fileName, 'utf-8'));
+        return fs.readFileSync(this.fileName, 'utf-8');
 
     },
 
@@ -53,5 +53,7 @@ const User = {
         return true;
     }
 }
+
+console.log(User.getData())
 
 module.exports = User;
