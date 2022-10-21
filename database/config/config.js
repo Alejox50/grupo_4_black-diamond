@@ -1,7 +1,7 @@
 const   conf_db_host = 'localhost',
 conf_db_name   = 'blackdiamond_db', 
 conf_user     = 'root',
-    conf_password = 'alejo147',
+    conf_password = 'root',
     conf_port     = '3306';
 module.exports = {
     conf_db_host : conf_db_host,

@@ -34,7 +34,7 @@ const validateRegister = [
 
 router.get("/login", userController.login);
 
-router.post("/register", upload.single("avatar") ,userController.save);
+router.post("/register", validateRegister, upload.single("imagenUsuario") ,userController.save);
 
 router.get('/register',userController.register)
 
