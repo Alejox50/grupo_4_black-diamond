@@ -9,31 +9,37 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        Nombre:{
-            type: dataTypes.STRING(100),
+        Nombres:{
+            type: dataTypes.STRING(50),
             allowNull: false
         },
-        Apellido:{
-            type: dataTypes.STRING(100),
+        Apellidos:{
+            type: dataTypes.STRING(50),
             allowNull: false
         },
         Correo:{
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(50),
             allowNull: false
         },
-        Password:{
-            type: dataTypes.STRING(100),
+        Contraseña:{
+            type: dataTypes.STRING(20),
             allowNull: false
         }
 
     };
 
     let config = {
-        tableName: "usuarios",
+        tableName: "usuario",
         timestamps: false
     };
 
     const usuario = sequelize.define(alias, cols, config);
+    usuario.associate = function(models) {
+        usuario.hasMany(models.imagen_usuarios, {
+            as: "imagen_u",
+            foreignKey: "IdUsuario"
+        })
+    };
 
     return usuario;
 }

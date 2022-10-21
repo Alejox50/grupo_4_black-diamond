@@ -2,17 +2,17 @@ const { INTEGER } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "products";
+    let alias = "productos";
 
     let cols = {
-        idProducts:{
+        IdProductos:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
 
-        Nombre:{
+        Nombre_p:{
             type: DataTypes.STRING(100),
             allowNull: false
         },
@@ -22,35 +22,30 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
 
-        Imagen:{
-            type: DataTypes.STRING(1000),
-            allowNull: false
-        },
-
         Precio:{
             type: DataTypes.FLOAT,
             allowNull: false
         },
 
-        UserId:{
+        IdUsuario:{
             type: DataTypes.INTEGER,
             foreignKey: true,
             allowNull: false
         },
 
-        SizeId:{
+        IdTalla:{
             type: DataTypes.INTEGER,
             foreignKey: true,
             allowNull: false
         },
 
-        ColorId:{
+        IdColor:{
             type: DataTypes.INTEGER,
             foreignKey: true,
             allowNull: false
         },
 
-        CategoryId:{
+        IdCategoria:{
             type: DataTypes.INTEGER,
             foreignKey: true,
             allowNull: false
@@ -59,14 +54,14 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     let config = {
-        tableName: "products",
+        tableName: "producto",
         timestamps: false
     };
 
     const Productos = sequelize.define(alias, cols, config);
 
     Productos.associate = function(models) {
-        Productos.belongsTo(models.category, {
+        Productos.belongsTo(models.categoria, {
             as: "category",
             foreignKey: "CategoryId"
         }),
@@ -81,6 +76,10 @@ module.exports = (sequelize, DataTypes) => {
         Productos.belongsTo(models.usuario, {
             as: "usuarios",
             foreignKey: "UserId"
+        })
+        Productos.hasMany(models.imagen_productos, {
+            as: "imagen_p",
+            foreignKey: "IdProductos"
         })
 
     };

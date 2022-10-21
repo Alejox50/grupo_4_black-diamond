@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = "category";
+    let alias = "categoria";
 
     let cols = {
         idCategory:{
@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     let config = {
-        tableName: "category",
+        tableName: "categoria",
         timestamps: false
     };
 

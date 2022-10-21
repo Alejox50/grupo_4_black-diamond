@@ -3,13 +3,13 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Tallas";
 
     let cols = {
-        idsize:{
+        idSize:{
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
-        Nombre:{
+        Talla:{
             type: dataTypes.STRING(100),
             allowNull: false
         }
@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     let config = {
-        tableName: "size",
+        tableName: "tallas",
         timestamps: false
     };
 
