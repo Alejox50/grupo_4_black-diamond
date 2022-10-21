@@ -17,7 +17,9 @@ app.use(express.json());
 app.use(express.static("./public"));
 app.set('view engine', 'ejs')
 
-app.use("/",rutasUser, rutasProduct, rutasMain)
+app.use("/", rutasMain);
+app.use("/", rutasUser);
+app.use("/", rutasProduct);
 
 db.sequelize.sync({force: true}).then(() => {
     console.log('conectando')
