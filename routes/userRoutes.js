@@ -12,6 +12,7 @@ const validateRegister = [
     body('apellidos').notEmpty().withMessage('Tienes que escribir un apellido'),
     body('correo').notEmpty().withMessage('Tienes que escribir un correo electronico').bail().isEmail().withMessage('Debes escribir un formato de correo valido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({ min:8 }).withMessage('La contraseña debe tener minimo 8 caracteres'),
+    
     /*body('imagenUsuario').custom((value, { req })  =>  {
         let file = req.body.imagenUsuario;
         console.log(req.body.imagenUsuario,'lollololol')
@@ -31,11 +32,9 @@ const validateRegister = [
 ]
 
 
-
-
 router.get("/login", userController.login);
 
-router.post("/register", validateRegister ,userController.save);
+router.post("/register", upload.single("avatar") ,userController.save);
 
 router.get('/register',userController.register)
 

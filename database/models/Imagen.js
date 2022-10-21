@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = "Imagen_productos";
+    let alias = "imagen";
 
     let cols = {
         IdImagen:{
@@ -9,19 +9,14 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        Imagen:{
-            type: dataTypes.STRING(10000),
-            allowNull: false
+        Ruta:{
+            type: dataTypes.STRING,
         },
-        IdProductos:{
-            type: dataTypes.INTEGER,
-            allowNull: false
-        }
 
     };
 
     let config = {
-        tableName: "imagen_p",
+        tableName: "imagen",
         timestamps: false
     };
 
@@ -31,7 +26,9 @@ module.exports = (sequelize, dataTypes) => {
             as: "producto",
             foreignKey: "IdProducto"
         })
+        imagen_prod.hasOne(models.usuarios)
     };
+
 
     return imagen_prod;
 }

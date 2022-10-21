@@ -5,10 +5,12 @@ const fs = require("fs");
 const bcrypt = require("bcrypt");
 //const conexion = require("./../database/models/index.js");
 const { type } = require("os");
-const sequelize  = require("./../database/models/index.js");
+const db  = require("./../database/models/index.js");
+const { brotliDecompress } = require("zlib");
 
+//console.log (db);
 let userController = {
-  save: function (req, res) {
+  save: async function (req, res) {
     let errors = validationResult(req);
     console.log(errors);
     if (errors.isEmpty()) {
@@ -18,15 +20,8 @@ let userController = {
       const email = req.body.correo;
       const password = req.body.password;
       const imagen = req.file.filename; 
+      await db.usuarios.create ({Nombres: usuario, Apellidos: apellido, Correo: email, Password:password, imagenIdImagen:{Ruta:imagen} });
       console.log("llegue al user controller");
-      sequelize.query('INSERT INTO usuario (nombres,apellidos,correo,password) VALUES(?,?,?,?)',{
-            replacements: [usuario, apellido, email, password],
-            type:sequelize.QueryTypes.INSERT
-        });
-      sequelize.query('INSERT INTO imagen_u (imagen) VALUES(?)',{
-          replacements: [imagen],
-          type:sequelize.QueryTypes.INSERT
-      });
     } else {
       console.log("hay errores");
       return res.status(409).send(errors);

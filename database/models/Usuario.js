@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(20),
             allowNull: false
         }
-
+ 
     };
 
     let config = {
@@ -34,12 +34,10 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const usuario = sequelize.define(alias, cols, config);
-    usuario.associate = function(models) {
-        usuario.hasMany(models.imagen_usuarios, {
-            as: "imagen_u",
-            foreignKey: "IdUsuario"
-        })
-    };
+        usuario.associate = function(models) {
+            usuario.belongsTo(models.imagen),
+            usuario.belongsToMany(models.productos, {through: 'Carrito'} )
+        };
 
     return usuario;
 }
