@@ -486,7 +486,7 @@ main {
     width: 80vw;
 }
 .imagen {
-    width:40%;
+    width:20%;
 }
 
 /*                                                      Products                                                     */
@@ -498,7 +498,7 @@ main {
     text-align: center;
     color: #fff;
 }
-/*.productos img {
+.productos img {
     width: 150px;
 }
 .productos .imagen img{
@@ -512,7 +512,8 @@ main {
     text-align: center;
     color:black;
     background-color: rgba(0, 0, 0, 0.466);
-}*/
+}
+
 .product img{
     width: 150px;
 }
