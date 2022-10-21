@@ -19,8 +19,6 @@ const router = express.Router();
 
 router.get("/products", productController.products)
 
-router.get("/product/create", productController.create)
-
 router.get("/camisetas", productController.camisetas)
 router.get("/busos", productController.busos)
 router.get("/gorras", productController.gorras)

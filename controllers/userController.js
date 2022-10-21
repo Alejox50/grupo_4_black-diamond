@@ -17,14 +17,20 @@ let userController = {
       const apellido = req.body.apellidos;
       const email = req.body.correo;
       const password = req.body.password;
+      const imagen = req.file.filename; 
       console.log("llegue al user controller");
-      sequelize.query('INSERT INTO usuarios (nombre,apellido,correo,password) VALUES(?,?,?,?)',{
+      sequelize.query('INSERT INTO usuario (nombres,apellidos,correo,password) VALUES(?,?,?,?)',{
             replacements: [usuario, apellido, email, password],
             type:sequelize.QueryTypes.INSERT
         });
+      sequelize.query('INSERT INTO imagen_u (imagen) VALUES(?)',{
+          replacements: [imagen],
+          type:sequelize.QueryTypes.INSERT
+      });
     } else {
       console.log("hay errores");
       return res.status(409).send(errors);
+      res.redirect('/user/login');
     }
   },
 

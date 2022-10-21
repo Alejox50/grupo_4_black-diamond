@@ -17,8 +17,8 @@
         <form class="formulario-register" action="/register" method="POST">  
         <section>
             <h4>Registro</h4>
-            <input class="register-control" type ="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" value="<%= locals.old && old.nombres%>">
-            <input class="register-control" type ="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" value="<%= locals.old && old.apellidos%>">
+            <input class="register-control" type ="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre compelto" value="<%= locals.old && old.nombres%>">
+            <input class="register-control" type ="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido completo" value="<%= locals.old && old.apellidos%>">
             <input class="register-control" type ="email" name="correo" id="correo" placeholder="Ingrese su Correo" value="<%= locals.old && old.correo%>">
             <input class="register-control" type ="password" name="password" id="contraseña"placeholder="Ingrese su contraseña" value="<%= locals.old && old.password%>">
             <input class="register-control" type ="file" name="imagenUsuario" id="avatar">
