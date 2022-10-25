@@ -5,7 +5,7 @@ const fs = require("fs");
 const bcrypt = require("bcrypt");
 //const conexion = require("./../database/models/index.js");
 const { type } = require("os");
-const db  = require("./../database/models/index.js");
+const db = require("./../database/models/index.js");
 const { brotliDecompress } = require("zlib");
 
 //console.log (db);
@@ -19,13 +19,19 @@ let userController = {
       const apellido = req.body.apellidos;
       const email = req.body.correo;
       const password = req.body.password;
-      const imagen = req.file.filename; 
-      await db.usuarios.create ({Nombres: usuario, Apellidos: apellido, Correo: email, Password:password, imagenIdImagen:{Ruta:imagen} });
-      console.log("llegue al user controller");
+      const Ruta = req.file.filename;
+      const imagen = await db.imagen.create({ Ruta });
+      await db.usuarios.create({
+        Nombres: usuario,
+        Apellidos: apellido,
+        Correo: email,
+        Password: password,
+        imagenIdImagen: imagen.IdImagen,
+      });
+      res.redirect("/login");
     } else {
-      console.log("hay errores");
-      return res.status(409).send(errors);
-      res.redirect('/user/login');
+      res.render("users/register", {errors: errors.errors})
+      // return res.status(409).send(errors);
     }
   },
 

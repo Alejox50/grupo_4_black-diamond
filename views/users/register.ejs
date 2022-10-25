@@ -3,20 +3,18 @@
     <%- include('../partials/head')%> 
 <body>
     <%- include('../partials/headerRegister')%>          
-    
-     
+        
     <main>
         <% if (typeof errors != 'undefined')  { %> 
             <p style='color:red'>ERROR</p>
-             
             <ul>
                 <% for (let i= 0; i < errors.length; i++) { %> 
                     <li>
-                        <% errors[i].msg %> 
+                        <%= errors[i].msg %> 
                     </li>
                 <% } %> 
-                <% } %>   
             </ul>  
+        <% } %> 
         <form class="formulario-register" action="/register" method="POST">  
         <section>
             <h4>Registro</h4>
