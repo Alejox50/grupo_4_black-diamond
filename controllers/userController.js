@@ -5,7 +5,7 @@ const fs = require("fs");
 const bcrypt = require("bcrypt");
 //const conexion = require("./../database/models/index.js");
 const { type } = require("os");
-const db  = require("./../database/models/index.js");
+const db = require("./../database/models/index.js");
 const { brotliDecompress } = require("zlib");
 
 //console.log (db);

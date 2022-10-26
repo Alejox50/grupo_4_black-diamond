@@ -214,9 +214,11 @@ main {
     display:flex;
     text-align: center;
 }
+
 .info h2 {
     text-align: center;
 }
+
 @keyframes banner{
 	0%{
 		background-image: url("/images/banner-1.jpg");
