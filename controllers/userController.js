@@ -18,14 +18,21 @@ let userController = {
       const usuario = req.body.nombres;
       const apellido = req.body.apellidos;
       const email = req.body.correo;
-      const password = req.body.password;
-      const imagen = req.file.filename; 
-      await db.usuarios.create ({Nombres: usuario, Apellidos: apellido, Correo: email, Password:password, imagenIdImagen:{Ruta:imagen} });
-      console.log("llegue al user controller");
-    } else {
-      console.log("hay errores");
-      return res.status(409).send(errors);
+      const password = req.body.password; 
+      const Ruta = req.file.filename;
+      const imagen = await db.imagen.create({Ruta});
+      await db.usuarios.create ({
+        Nombres: usuario,
+        Apellidos: apellido,
+        Correo: email,
+        Password:password,
+        imagenIdImagen:imagen.imagenUsuario,
+      });
       res.redirect('/user/login');
+    } else {
+      res.render("users/registre", {errors: errors.errors})
+      //return res.status(409).send(errors);
+      
     }
   },
 

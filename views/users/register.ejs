@@ -4,7 +4,7 @@
 <body>
     <%- include('../partials/headerRegister')%>          
     
-    <% } %>     
+      
     <main>
         <% if (typeof errors != 'undefined')  { %> 
             <p style='color:red'>ERROR</p>
@@ -15,7 +15,8 @@
                     </li>
                 <% } %> 
             </ul>  
-        <form class="formulario-register" action="/register" method="POST">  
+        <% } %>       
+        <form class="formulario-register" action="/register" method="POST" enctype="multipart/form-data">
         <section>
             <h4>Registro</h4>
             <input class="register-control" type ="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre compelto" value="<%= locals.old && old.nombres%>">
