@@ -8,27 +8,27 @@ const { type } = require("os");
 const db = require("./../database/models/index.js");
 const { brotliDecompress } = require("zlib");
 
+
 //console.log (db);
 let userController = {
   save: async function (req, res) {
     let errors = validationResult(req);
     console.log(errors);
-    if (errors.isEmpty()) {
+    console.log(errors.isEmpty())
+    console.log(req.body)
+    if (true) {
       console.log("no hay errores");
       const usuario = req.body.nombres;
       const apellido = req.body.apellidos;
       const email = req.body.correo;
       const password = req.body.password; 
-      const Ruta = req.file.filename;
-      const imagen = await db.imagen.create({Ruta});
       await db.usuarios.create ({
         Nombres: usuario,
         Apellidos: apellido,
         Correo: email,
         Password:password,
-        imagenIdImagen:imagen.imagenUsuario,
       });
-      res.redirect('/user/login');
+      res.redirect('/login');
     } else {
       res.render("users/register", {errors: errors.errors})
       //return res.status(409).send(errors);
@@ -44,10 +44,11 @@ let userController = {
     res.render("./../views/users/register.ejs");
   },
 
-  processLogin: function (req, res) {
+  processLogin:async function (req, res) {
     let errors = validationResult(req);
 
-    if (errors.isEmpty()) {
+    if (true) {
+      /*
       let usersJSON = fs.readFileSync("./database/models/Usuario.js", {
         encoding: "UTF-8",
       });
@@ -73,7 +74,24 @@ let userController = {
       }
 
       req.session.usuarioLogueado = usuarioALoguearse;
-      res.render("success");
+      res.render("success");*/
+      console.log(req.body)
+      const email = req.body.email;
+      const password = req.body["contraseña"];
+      const user = await db.usuarios.findOne({
+        where: {
+          Correo: email,
+          Password: password,
+        }
+      });
+      if(!user){
+        return res.render("/login", {
+          errors: [{ msg: "Credenciales Invalidas" }],
+        });
+      }else{
+        req.session.usuarioLogueado = user;
+        res.render("./../views/index.ejs");
+      }
     } else {
       return res.render("users/login", { errors: errors.errors });
     }

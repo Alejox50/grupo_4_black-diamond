@@ -134,10 +134,11 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
-  `idUser` int NOT NULL,
-  `Nombre` varchar(45) DEFAULT NULL,
-  `Apellido` varchar(45) DEFAULT NULL,
-  `Correo` varchar(45) DEFAULT NULL,
+  `idUser` INT NOT NULL AUTO_INCREMENT,
+  `Nombres` VARCHAR(50) NOT NULL,
+  `Apellidos` VARCHAR(50) NOT NULL,
+  `Correo` VARCHAR(50) NOT NULL,
+  `Password` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Creacion de los usuarios';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -148,7 +149,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Fernando','Torres','jfernandogmail'),(2,'Alejandro','Rodas','arodasgmail'),(3,'Juan','Marulanda','jmarulandagmail');
+INSERT INTO `usuarios` VALUES (1,'Fernando','Torres','jfernando@gmail.com','fernando1231' ),(2,'Alejandro','Rodas','arodas@gmail.com', 'alejo1231'),(3,'Juan','Marulanda','jmarulanda@gmail.com', 'juanjo1231');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

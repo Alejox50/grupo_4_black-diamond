@@ -22,20 +22,19 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         Password:{
-            type: dataTypes.STRING(20),
+            type: dataTypes.STRING(50),
             allowNull: false
         }
  
     };
 
     let config = {
-        tableName: "usuario",
+        tableName: "usuarios",
         timestamps: false
     };
 
     const usuario = sequelize.define(alias, cols, config);
         usuario.associate = function(models) {
-            usuario.belongsTo(models.imagen),
             usuario.belongsToMany(models.productos, {through: 'Carrito'} )
         };
 
