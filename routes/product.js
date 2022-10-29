@@ -18,7 +18,6 @@ const upload = multer({storage});
 const router = express.Router();
 
 router.get("/products", productController.products)
-
 router.get("/camisetas", productController.camisetas)
 router.get("/busos", productController.busos)
 router.get("/gorras", productController.gorras)

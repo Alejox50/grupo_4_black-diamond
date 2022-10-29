@@ -30,7 +30,7 @@ let userController = {
       });
       res.redirect('/user/login');
     } else {
-      res.render("users/registre", {errors: errors.errors})
+      res.render("users/register", {errors: errors.errors})
       //return res.status(409).send(errors);
       
     }
@@ -67,7 +67,7 @@ let userController = {
         }
       }
       if (usuarioALoguearse == undefined) {
-        return res.render("login", {
+        return res.render("users/login", {
           errors: [{ msg: "Credenciales Invalidas" }],
         });
       }
@@ -75,7 +75,7 @@ let userController = {
       req.session.usuarioLogueado = usuarioALoguearse;
       res.render("success");
     } else {
-      return res.render("login", { errors: errors.errors });
+      return res.render("users/login", { errors: errors.errors });
     }
   },
 

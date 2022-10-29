@@ -3,34 +3,26 @@
     <%- include('../partials/head')%> 
 <body>
     <%- include('../partials/headerRegister')%>          
-    
-      
     <main>
-        <% if (typeof errors != 'undefined')  { %> 
-            <p style='color:red'>ERROR</p>
-            <ul>
-                <% for (let i= 0; i < errors.length; i++) { %> 
-                    <li>
-                        <%= errors[i].msg %> 
-                    </li>
-                <% } %> 
-            </ul>  
-        <% } %>       
+             
         <form class="formulario-register" action="/register" method="POST" enctype="multipart/form-data">
         <section>
-            <h4>Registro</h4>
+            <h4>Registro</h4> 
             <input class="register-control" type ="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre compelto" value="<%= locals.old && old.nombres%>">
+            <p style='color:red'> <%= locals.errors?.[0].msg%> </p>
             <input class="register-control" type ="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido completo" value="<%= locals.old && old.apellidos%>">
+            <p style='color:red'> <%= locals.errors?.[1].msg%> </p>
             <input class="register-control" type ="email" name="correo" id="correo" placeholder="Ingrese su Correo" value="<%= locals.old && old.correo%>">
+            <p style='color:red'> <%= locals.errors?.[2].msg%> </p>
             <input class="register-control" type ="password" name="password" id="contraseña"placeholder="Ingrese su contraseña" value="<%= locals.old && old.password%>">
+            <p style='color:red'> <%= locals.errors?.[3].msg%> </p>
             <input class="register-control" type ="file" name="imagenUsuario" id="avatar">
             <p>Estoy de acuerdo con: <a href="#">Terminos y condiciones</a></p>
             <input class="botonsre" type="submit" value="Registrar" href="/login">
             <p><a href="/login">¿Ya tengo cuenta?</a></p>
         </section>  
         </form>
-    </main>
-  
+    </main> 
 
 </body>
 

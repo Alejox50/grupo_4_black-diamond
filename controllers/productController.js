@@ -5,7 +5,16 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+/*const Ruta = req.file.filename;
+      const imagen = await db.imagen.create({Ruta});
+      await db.usuarios.create ({
+        Nombres: usuario,
+        Apellidos: apellido,
+        Correo: email,
+        Password:password,
+        imagenIdImagen:imagen.imagenUsuario,
+      });*/
+ 
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -38,15 +47,7 @@ let productController = {
     },
     product: function(req,res) {
         if (req.file) {
-            let product = {
-                "name": req.body.producto,
-                "price": req.body.precio,
-                "discount": req.body.descuento,
-                "category": req.body.categoria,
-                "description": req.body.descripcion,
-                "color": req.body.color
-                
-            }
+            
             product.image = req.file.filename
             products.push(product)
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
