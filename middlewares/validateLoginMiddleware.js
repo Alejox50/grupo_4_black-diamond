@@ -1,13 +1,17 @@
-const path = require ('path');
-const { check: body } = require('express-validator');
+const {logInBodyValidation} = require('../utils/validationSchema');
 
-module.exports = [
-    // Cambiar el arreglo de los errores por un objeto
-    body('correo')
-        .notEmpty().withMessage('Tienes que escribir un correo electronico').bail()
-        .isEmail().withMessage('Debes escribir un formato de correo valido'),
-    body('password')
-        .notEmpty().withMessage('Tienes que escribir una contraseña').bail()
-        .isLength({ min:8 }).withMessage('La contraseña debe tener minimo 8 caracteres'),
-
-]
+async function verifyContentLogIn(req,res,next)
+{
+    const { error } = logInBodyValidation(req.body);
+    if (error) {
+        return res
+                .status(400)
+                .json({ error: true, message: error.details});
+    }else
+    {
+        return next();
+    }
+}
+module.exports= {
+    verifyContentLogIn,
+};
