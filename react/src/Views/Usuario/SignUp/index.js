@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import Nav from "../../../components/Nav";
 
-// Creating schema
+
 const schema = Yup.object().shape({
   firstName: Yup.string()
     .max(40)
