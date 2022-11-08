@@ -3,6 +3,10 @@ import "./styles.css";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import Nav from "../../../components/Nav";
+import axios from "axios";
+import FormData from 'form-data'
+import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom";
 
 
 const schema = Yup.object().shape({
@@ -25,8 +29,10 @@ const schema = Yup.object().shape({
 });
 
 function App() {
+  const navigate = useNavigate()
 
   const [fieldValue, setFieldValue] = useState();
+  const [fieldValue2, setFieldValue2] = useState();
   const [isImageAdded, setIsImageAdded] = useState(false);
 
   return (
@@ -37,8 +43,50 @@ function App() {
         validationSchema={schema}
         initialValues={{ email: "", password: "" }}
         onSubmit={(values) => {
-         
-          alert(JSON.stringify(values));
+          axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+          axios.post("http://localhost:3001/signup", values).then((response) => {
+            if (isImageAdded) {
+              const formData = new FormData();
+              formData.append('uploaded_file', fieldValue2[0]);
+              formData.append('uploaded_file', fieldValue2[0].name);
+              axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+              axios.post(`http://localhost:3001/uploadAvatar/${response.data.idUser}`, formData, {
+                headers: {
+                  'accept': 'application/json',
+                  'Accept-Language': 'en-US,en;q=0.8',
+                  'Content-Type': `multipart/form-data; boundary=${formData._boundary}`,
+                }
+              })
+                .then((response) => {
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Usuario Registrado',
+                    showConfirmButton: false,
+                    timer: 1500
+                  }).then(() => {
+                    navigate("/")
+                  }).catch(() => {
+                    Swal.fire({
+                      icon: 'error',
+                      title: 'Opps Ocurrio un error',
+                      showConfirmButton: false,
+                      timer: 1500
+                    })
+                    navigate("/")
+                  });
+                }).catch(() => {
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Opps Ocurrio un error',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  navigate("/")
+                });
+            }
+          }).catch((err) => {
+            console.log(err)
+          })
         }}
       >
         {({
@@ -140,6 +188,8 @@ function App() {
                   name="file"
                   onChange={(event) =>{
                     setFieldValue(URL.createObjectURL(event.target.files[0]));
+                    setFieldValue2(event.target.files);
+                    
                     setIsImageAdded(true);
                   }}
                 />
