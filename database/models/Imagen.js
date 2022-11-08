@@ -26,7 +26,6 @@ module.exports = (sequelize, dataTypes) => {
             as: "producto",
             foreignKey: "IdProducto"
         })
-        imagen_prod.hasOne(models.usuarios)
     };
 
 

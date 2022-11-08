@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, Image, Icon, Segment, Dropdown } from 'semantic-ui-react'
 import logo from '../img/logo.png'
 import { useNavigate } from "react-router-dom";
+import { storeData } from '../states/stores';
+import axios from "axios";
 
 const Nav = () => {
     const navigate = useNavigate()
     const [isLogged, SetIsLogged] = useState(false);
+    const getUser = storeData(state => state.user);
+    const addUser = storeData(state => state.addUser);
 
-    function handleItemClick() {
-        alert("reasda")
+    function handleSignOut() {
+        localStorage.removeItem("accessToken")
+        localStorage.removeItem("refreshToken")
+        addUser({})
+        navigate("/")
+        window.location.reload(false);
     }
 
     function redirectCamisas() {
@@ -18,6 +26,19 @@ const Nav = () => {
     function redirectBusos() {
         navigate("/busos")
     }
+
+    function redirectGorras() {
+        navigate("/gorras")
+    }
+
+    function redirectCarrito() {
+        navigate("/carrito")
+    }
+
+    function redirectJogger() {
+        navigate("/jogger")
+    }
+
 
     function redirectHome() {
         navigate("/")
@@ -31,9 +52,20 @@ const Nav = () => {
         navigate("/signup")
     }
 
+    function redirectAddProduct() {
+        navigate("/addproduct")
+    }
+
+
     const trigger = (
         <span>
-            <Icon name='user' /> {isLogged? "Hello, Bob": "Inicia Sesion"}
+            {isLogged ?
+                getUser.NombreImagen === null ? <Icon name='user' />
+                    : <img style={{ width: 50, height: 50, borderRadius: "50%" }} src={`http://localhost:3001/avatar/${getUser.NombreImagen}`} alt="Logo" />
+                : <Icon name='user' />
+
+            }
+            {isLogged ? `Hola, ${getUser.Nombres}` : "Inicia Sesion"}
         </span>
     )
 
@@ -42,14 +74,14 @@ const Nav = () => {
             key: 'user',
             text: (
                 <span>
-                    Signed in as <strong>Bob Smith</strong>
+                    Hola <strong>{getUser.Nombres}</strong>
                 </span>
             ),
             disabled: true,
         },
-        { key: 'profile', text: 'Your Profile' },
-        { key: 'settings', text: 'Settings' },
-        { key: 'sign-out', text: 'Sign Out', onClick: handleItemClick },
+        { key: 'profile', text: 'Tu perfil' },
+        { key: 'agregar-producto', text: 'Agregar producto', onClick: redirectAddProduct },
+        { key: 'sign-out', text: 'Cerrar sesion', onClick: handleSignOut },
     ]
 
     const optionsUsuarioNoLogeado = [
@@ -61,11 +93,33 @@ const Nav = () => {
         { key: 'sign-up', text: 'Registro', onClick: redirectSignUp },
     ]
 
+
+    useEffect(() => {
+        const config = {
+            headers: {
+                "token": `${localStorage.getItem("accessToken")}`,
+            },
+        };
+        axios.get("http://localhost:3001/getuserinfo", config)
+            .then(function (response) {
+                console.log(response.data.user)
+                addUser(response.data.user)
+                SetIsLogged(true)
+            }).catch((err) => {
+                localStorage.removeItem("accessToken")
+                localStorage.removeItem("refreshToken")
+                addUser({})
+                SetIsLogged(false)
+            })
+    }, [])
+
     return (
 
         <Menu borderless>
             <Segment className='nav-segment'>
-                <Menu.Item>
+                <Menu.Item
+                    onClick={redirectHome}
+                >
                     <Image src={logo} size='small' />
                 </Menu.Item>
 
@@ -80,7 +134,7 @@ const Nav = () => {
                     style={{ fontSize: "20px", fontWeight: 'bold' }}
                     name='Todo'
                     size='large'
-                    onClick={handleItemClick}
+                    onClick={redirectHome}
                 />
 
                 <Menu.Item
@@ -99,23 +153,27 @@ const Nav = () => {
                     style={{ fontSize: "20px", fontWeight: 'bold' }}
                     name='Gorras'
                     size='large'
-                    onClick={handleItemClick}
+                    onClick={redirectGorras}
                 />
 
                 <Menu.Item
                     style={{ fontSize: "20px", fontWeight: 'bold' }}
                     name='Jogger'
                     size='large'
-                    onClick={handleItemClick}
+                    onClick={redirectJogger}
                 />
 
                 <Menu.Item position='right'>
-                    <Dropdown trigger={trigger} options={isLogged? optionsUsuarioLogeado : optionsUsuarioNoLogeado} />
+                    <Dropdown trigger={trigger} options={isLogged ? optionsUsuarioLogeado : optionsUsuarioNoLogeado} />
                 </Menu.Item>
 
-                <Menu.Item>
-                    <Icon name='shopping cart' size='large' color='green' />
-                </Menu.Item>
+                {isLogged ?
+                    <Menu.Item
+                        onClick={redirectCarrito}
+                    >
+                        <Icon name='shopping cart' size='large' color='green' />
+                    </Menu.Item> : <></>
+                }
 
             </Segment>
         </Menu>

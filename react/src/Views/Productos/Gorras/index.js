@@ -14,7 +14,7 @@ function App() {
       <Nav />
       <Grid centered stackable padded relaxed>
         <Grid.Column width={9}>
-          <ProductContainer name="Camisetas" id={3}/>
+          <ProductContainer name="Gorras" id={1}/>
         </Grid.Column>
       </Grid>
       <Footer />

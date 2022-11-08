@@ -8,7 +8,7 @@ import FormData from 'form-data'
 import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom";
 
-
+// Creating schema
 const schema = Yup.object().shape({
   firstName: Yup.string()
     .max(40)
@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <Nav />
-      {}
+      {/* Wrapping form inside formik tag and passing our schema to validationSchema prop */}
       <Formik
         validationSchema={schema}
         initialValues={{ email: "", password: "" }}
@@ -99,7 +99,7 @@ function App() {
         }) => (
           <div className="login">
             <div className="form">
-              {}
+              {/* Passing handleSubmit parameter to html form onSubmit property */}
               <form noValidate onSubmit={handleSubmit}>
                 <span>Registro</span>
                 
@@ -108,7 +108,7 @@ function App() {
                   <></>
 
                 }
-                {}
+                {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
                 <input
                   type="firstName"
                   name="firstName"
@@ -164,11 +164,11 @@ function App() {
                   className="form-control inp_text"
                   id="email"
                 />
-                {}
+                {/* If validation is not passed show errors */}
                 <p className="error">
                   {errors.email && touched.email && errors.email}
                 </p>
-                {}
+                {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
                 <input
                   type="password"
                   name="password"
@@ -178,7 +178,7 @@ function App() {
                   placeholder="Introducir la Contraseña"
                   className="form-control"
                 />
-                {}
+                {/* If validation is not passed show errors */}
                 <p className="error">
                   {errors.password && touched.password && errors.password}
                 </p>
@@ -194,7 +194,7 @@ function App() {
                   }}
                 />
 
-                {}
+                {/* Click on submit button to submit the form */}
                 <button type="submit">Registrar</button>
               </form>
             </div>

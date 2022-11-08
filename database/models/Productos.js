@@ -27,12 +27,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
 
-        IdUsuario:{
-            type: DataTypes.INTEGER,
-            foreignKey: true,
-            allowNull: false
-        },
-
         IdTalla:{
             type: DataTypes.INTEGER,
             foreignKey: true,
@@ -49,8 +43,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             foreignKey: true,
             allowNull: false
-        }
+        },
 
+        NombreImagen:{
+            type: DataTypes.STRING(255),
+            allowNull: true
+        }
     };
 
     let config = {
@@ -63,10 +61,7 @@ module.exports = (sequelize, DataTypes) => {
     Productos.associate = function(models) {
         Productos.belongsTo(models.categoria),
         Productos.hasMany(models.color),
-        Productos.hasMany(models.Tallas),
-        Productos.belongsToMany(models.usuarios, {through: 'Carrito'} ),
-        Productos.hasMany(models.imagen)
-
+        Productos.hasMany(models.Tallas)
     };
 
     return Productos;

@@ -18,7 +18,7 @@ function App() {
       </div>
       <Grid centered stackable padded relaxed>
         <Grid.Column width={9}>
-          <ProductContainer />
+          <ProductContainer name="Productos" id={-1}/>
         </Grid.Column>
       </Grid>
       <Footer />

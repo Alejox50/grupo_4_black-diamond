@@ -1,8 +1,8 @@
 const express = require('express');
 const productController = require('../controllers/productController.js');
-const router = express.router();
-const multer = require('multer');
-const { uuid } = required('uuidv4')
+const router = express.Router();
+const multer = require('multer')
+const { uuid } = require('uuidv4');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
         cb(null, fileName)
     }
 })
-const upload = multer({ storage: storage });
+const upload = multer({ storage: storage })
 
 
 router.post('/uploadProduct/:id', upload.single('uploaded_file'), productController.setImage);

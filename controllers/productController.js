@@ -1,82 +1,105 @@
-const { json } = require('express');
-const fs = require('fs');
-const path = require('path');
-
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-/*const Ruta = req.file.filename;
-      const imagen = await db.imagen.create({Ruta});
-      await db.usuarios.create ({
-        Nombres: usuario,
-        Apellidos: apellido,
-        Correo: email,
-        Password:password,
-        imagenIdImagen:imagen.imagenUsuario,
-      });*/
- 
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require("./../database/models/index.js");
+const { resolve } = require('path');
 
 let productController = {
-    cart: function(req, res) {
-        res.render('./products/cart')
+    addProduct: async function (req, res) {
+        console.log("entre");
+        console.log(req.body)
+        const name = req.body.name;
+        const descripcion = req.body.descripcion;
+        const precio = Number(req.body.precio);
+        const idTalla = Number(req.body.idTalla);
+        const idColor = Number(req.body.idColor);
+        const idCategoria = Number(req.body.idCategoria);
+        await db.productos.create({
+            Nombre_p: name,
+            Descripcion: descripcion,
+            Precio: precio,
+            IdTalla: idTalla,
+            IdColor: idColor,
+            IdCategoria: idCategoria
+        }).then((result) => {
+            res.status(201).json({ error: false, message: "Producto Creado",idProduct: result.dataValues.IdProductos });
+        }).catch((err) => {
+            //console.log(err)
+            res.status(500).json({ error: true, message: "Error interno" });
+        })
     },
-
-    detail: function(req, res) {
-        res.render('./products/productdetail')
+    getAllProducts: async function (req, res) {
+        await db.productos.findAll().then((result) => {
+            res.status(201).json({ error: false, products: result });
+        }).catch((err) => {
+            res.status(500).json({ error: true, message: "Error interno" });
+        });
     },
-    productAdmin: function(req, res) {
-        let nombre = [
-            "Camisa azul"
-        ];
-        let descripcion = [
-            "Camisa Azul tipo Jean para Hombre"
-        ];
-        let precio = [
-            "$ 120.000"
-        ]
-        res.render("./products/productAdmin", {"nombre" : nombre, "descripcion" : descripcion, "precio" : precio})
+    getProductsByCategoria: async function (req, res) {
+        const categoria = req.params.categoria;
+        await db.productos.findAll(
+            { where: { IdCategoria: categoria } }
+        ).then((result) => {
+            res.status(201).json({ error: false, products: result });
+        }).catch((err) => {
+            res.status(500).json({ error: true, message: "Error interno" });
+        });
     },
-    products: function(req, res) {
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render("./products/products", {"products" : products})
+    getProductById: async function (req, res) {
+        const id = req.params.id;
+        await db.productos.findByPk(id).then((result) => {
+            res.status(201).json({ error: false, products: result });
+        }).catch((err) => {
+            res.status(500).json({ error: true, message: "Error interno" });
+        });
     },
-    create: function(req,res) {
-        res.render('./products/productAdmin')
+    editProduct: async function (req, res) {
+        const id = req.params.id;
+        const name = req.body.name;
+        const descripcion = req.body.descripcion;
+        const precio = req.body.precio;
+        const idTalla = req.body.idTalla;
+        const idColor = req.body.idColor;
+        const idCategoria = req.body.idCategoria;
+        await db.productos.update(
+            {
+                Nombre_p: name,
+                Descripcion: descripcion,
+                Precio: precio,
+                IdTalla: idTalla,
+                IdColor: idColor,
+                IdCategoria: idCategoria
+            },
+            { where: { IdProductos: id } }
+        ).then((result) => {
+            res.status(201).json({ error: false, message: "Producto editado" });
+        }).catch((err) => {
+            res.status(500).json({ error: true, message: "Error interno" });
+        })
     },
-    product: function(req,res) {
-        if (req.file) {
-            
-            product.image = req.file.filename
-            products.push(product)
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect("./database/models/Productos.js");
-        }
-        else {
-            res.render('./products/productAdmin')
-        }
+    deleteProduct: async function (req, res) {
+        const id = req.params.id;
+        await db.productos.destroy({ where: { IdProductos: id } }).then((result) => {
+            res.status(201).json({ error: false, message: "Producto Eliminado" });
+        }).catch((err) => {
+            res.status(500).json({ error: true, message: "Error interno" });
+        });
     },
-    delete: function(req,res) {
-        
+    setImage: async function (req, res) {
+        const id = req.params.id;
+        await db.productos.update(
+            {
+                NombreImagen: req.file.filename
+            },
+            { where: { IdProductos: id } }
+        ).then((result) => {
+            res.status(201).json({ error: false, message: "Imagen guardada", fileName: req.file.filename });
+        }).catch((err) => {
+            res.status(500).json({ error: true, message: "Error interno" });
+        })
     },
-    camisetas: function(req, res) {
-        res.render('./products/camisetas')
+    getImage: async function (req, res) {
+        const id = req.params.id;
+        const absolutePath = resolve('./public/uploads/products');
+        res.sendFile(`${absolutePath}\\${id}`);
     },
-    busos: function(req, res) {
-        res.render('./products/busos')
-    },
-    gorras: function(req, res) {
-        res.render('./products/gorras')
-    },
-    joggers: function(req, res) {
-        res.render('./products/joggers')
-    },
-    jeans: function(req, res) {
-        res.render('./products/jeans')
-    }
-    
-
 };
 
 module.exports = productController;
