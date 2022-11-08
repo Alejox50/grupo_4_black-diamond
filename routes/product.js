@@ -1,39 +1,30 @@
 const express = require('express');
 const productController = require('../controllers/productController.js');
-const path = require('path');  
-const multer = require("multer");
+const router = express.router();
+const multer = require('multer');
+const { uuid } = required('uuidv4')
 
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, "../public/images/productos")) 
+    destination: function (req, file, cb) {
+        cb(null, './public/uploads/products')
     },
-    filename: (req, file, cb) => {
-        const newFilename ="product-" + Date.now() + path.extname(file.originalname) ;
-        cb(null, newFilename)
+    filename: function (req, file, cb) {
+        var extension = file.originalname.split('.')[1]
+        var fileName = `${uuid()}.${extension}`
+        cb(null, fileName)
     }
-});
-
-const upload = multer({storage});
-
-const router = express.Router();
-
-router.get("/products", productController.products)
-router.get("/camisetas", productController.camisetas)
-router.get("/busos", productController.busos)
-router.get("/gorras", productController.gorras)
-router.get("/jeans", productController.jeans)
-router.get("/joggers", productController.joggers)
-
-router.post("/products",upload.single("imagen"), productController.product)
-
-router.delete("/products/:id/eliminar", (req,res) => {});
-
-router.get("/cart", productController.cart)
-router.get("/productdetail", productController.detail)
-router.get("/productAdmin", productController.productAdmin)
+})
+const upload = multer({ storage: storage });
 
 
+router.post('/uploadProduct/:id', upload.single('uploaded_file'), productController.setImage);
+router.post("/products", productController.addProduct)
+router.post("/products/edit/:id", productController.editProduct)
+router.get("/products", productController.getAllProducts)
+router.get("/products/:id", productController.getProductById)
+router.get("/products/categoria/:categoria", productController.getProductsByCategoria)
+router.get('/products/image/:id', productController.getImage);
 
-
+router.delete("/products/:id", productController.editProduct);
 
 module.exports = router;
