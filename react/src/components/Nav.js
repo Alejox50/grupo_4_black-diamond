@@ -125,7 +125,7 @@ const Nav = () => {
 
                 <Menu.Item
                     style={{ fontSize: "20px", fontWeight: 'bold' }}
-                    name='Home'
+                    name='Inicio'
                     size='large'
                     onClick={redirectHome}
                 />
