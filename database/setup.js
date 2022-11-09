@@ -73,12 +73,21 @@ module.exports = async function save() {
 
     await db.productos.create({
         Nombre_p: "Buso VansxSailorMoon",
-        Descripcion:"",
+        Descripcion:"Buso vans azul con estampado de anime",
         Precio: 300000,
         IdTalla: 3,
         IdColor: 2,
         IdCategoria: 4,
         NombreImagen:"VansxSailorMoon.png"
+    });
+    await db.productos.create({
+        Nombre_p: "Buso Motors",
+        Descripcion:"Buso negro negro con estampado de moto",
+        Precio: 300000,
+        IdTalla: 3,
+        IdColor: 2,
+        IdCategoria: 4,
+        NombreImagen:"usonegromoto.jpeg"
     });
 }
 
